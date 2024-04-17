@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11F8C920-A59B-44D1-A72B-786738BF3DB8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TestQuizz</RootNamespace>
+    <AssemblyName>TestQuizz</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaiKiemTra.cs" />
+    <Compile Include="BoCauHoi.cs" />
+    <Compile Include="CauHoi.cs" />
+    <Compile Include="CursorsCustom.cs" />
+    <Compile Include="FChonCapTuongUng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChonCapTuongUng.designer.cs">
+      <DependentUpon>FChonCapTuongUng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhap.Designer.cs">
+      <DependentUpon>FormNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTruyTimKhoBau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTruyTimKhoBau.Designer.cs">
+      <DependentUpon>FTruyTimKhoBau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FVuotChuongNgaiVat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FVuotChuongNgaiVat.Designer.cs">
+      <DependentUpon>FVuotChuongNgaiVat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FBatBong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBatBong.Designer.cs">
+      <DependentUpon>FBatBong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fdapde.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fdapde.designer.cs">
+      <DependentUpon>Fdapde.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FChonCapTuongUng.resx">
+      <DependentUpon>FChonCapTuongUng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNhap.resx">
+      <DependentUpon>FormNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTruyTimKhoBau.resx">
+      <DependentUpon>FTruyTimKhoBau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FVuotChuongNgaiVat.resx">
+      <DependentUpon>FVuotChuongNgaiVat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBatBong.resx">
+      <DependentUpon>FBatBong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fdapde.resx">
+      <DependentUpon>Fdapde.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chayxegif.gif" />
+    <None Include="Resources\bang cau hoi.png" />
+    <None Include="Resources\bangdiemduaxe.png" />
+    <None Include="Resources\bangdiemdabanh.png" />
+    <None Include="Resources\bangdiemdabanh1.png" />
+    <None Include="Resources\Bangdiem1.png" />
+    <None Include="Resources\bangdiemlaixe.png" />
+    <None Include="Resources\bangdiemduaxe1.png" />
+    <None Include="Resources\backgrouddapde.png" />
+    <None Include="Resources\backgrouddapde2.png" />
+    <None Include="Resources\backgrouddapde4.png" />
+    <None Include="Resources\bangdiemdapde.png" />
+    <None Include="Resources\bangdiemgamede.png" />
+    <None Include="Resources\backgorundkhobau.png" />
+    <None Include="Resources\backgroundwin.png" />
+    <None Include="Resources\backgroudaicapload.jpg" />
+    <None Include="Resources\backgroundlatThe.png" />
+    <Content Include="Resources\caybua.png" />
+    <Content Include="Resources\chup banh.mp4" />
+    <Content Include="Resources\chuphut %28online-video-cutter.com%29.mp4" />
+    <Content Include="Resources\chuphut.mp4" />
+    <None Include="Resources\Picture3.png" />
+    <None Include="Resources\khung-thanh-san-bong-min.png" />
+    <None Include="Resources\khung banh.png" />
+    <None Include="Resources\Picture5.png" />
+    <None Include="Resources\Picture7.png" />
+    <None Include="Resources\Picture62.png" />
+    <None Include="Resources\Picture8.png" />
+    <None Include="Resources\Picture94.png" />
+    <None Include="Resources\Picture10.png" />
+    <None Include="Resources\Picture11.png" />
+    <None Include="Resources\Picture12.png" />
+    <None Include="Resources\conde.png" />
+    <None Include="Resources\condenhaymua.gif" />
+    <Content Include="Resources\CursorsBall.png" />
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\x-no.gif" />
+    <None Include="Resources\Picture2.png" />
+    <None Include="Resources\Picture13.png" />
+    <None Include="Resources\Picture10.gif" />
+    <None Include="Resources\DongHoXe.gif" />
+    <None Include="Resources\danhdau.png" />
+    <Content Include="Resources\DapAnDung.gif" />
+    <None Include="Resources\raising-hands-thumbs-up.gif" />
+    <None Include="Resources\start.png" />
+    <None Include="Resources\loadingVCNV.png" />
+    <None Include="Resources\sairoidapde.png" />
+    <None Include="Resources\dungdapde.png" />
+    <None Include="Resources\Screenshot 2024-04-10 145814.png" />
+    <None Include="Resources\dauX.png" />
+    <None Include="Resources\dungroibeoi.png" />
+    <None Include="Resources\Sairoibeoi.png" />
+    <None Include="Resources\Khoa.png" />
+    <None Include="Resources\ditimkhobau.png" />
+    <None Include="Resources\LoadDapDe.png" />
+    <None Include="Resources\backgroundwinchontuongung.png" />
+    <Content Include="Resources\xechayvuotchuongngaivat.mp4" />
+    <None Include="Resources\vuotchuongngaivat.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
