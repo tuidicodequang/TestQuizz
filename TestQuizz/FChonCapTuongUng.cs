@@ -4,7 +4,7 @@ using System.Diagnostics.SymbolStore;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using TestQuizz;
+using TestQuizz.Model;
 
 namespace doan
 {
@@ -24,13 +24,14 @@ namespace doan
         List<string> namebt = new List<string>();
         bool firstClick = true;
         Timer timer = new Timer();
+        public double Diem { get { return diem; } }
 
 
-        public FChonCapTuongUng()
+        public FChonCapTuongUng(List<CauHoi> cauhoiList)
         {
 
             InitializeComponent();
-            AddBoCauHoi();
+            danhSachCauHoi=cauhoiList;
             timer.Interval = 1500;
             timer.Tick += Timer_Tick;
             timer.Start();  
@@ -292,55 +293,6 @@ namespace doan
             selectedButton.FlatStyle = FlatStyle.Flat;
             namebt.Add(button.Name);
         }
-        public void AddBoCauHoi()
-        {
-
-            // Tạo và thêm các câu hỏi vào danh sách
-            CauHoi cauHoi1 = new CauHoi(1, "1 + 1 = ?", "2", "3", "4", "5", "", 1);
-            danhSachCauHoi.Add(cauHoi1);
-
-            CauHoi cauHoi2 = new CauHoi(2, "2 + 3 = ?", "5", "6", "7", "8", "", 1);
-            danhSachCauHoi.Add(cauHoi2);
-
-            CauHoi cauHoi3 = new CauHoi(3, "4 - 2 = ?", "2", "3", "4", "5", "", 1);
-            danhSachCauHoi.Add(cauHoi3);
-
-            CauHoi cauHoi4 = new CauHoi(4, "5 - 3 = ?", "2", "3", "4", "5", "", 1);
-            danhSachCauHoi.Add(cauHoi4);
-
-            CauHoi cauHoi5 = new CauHoi(5, "3 + 4 = ?", "7", "8", "9", "10", "", 1);
-            danhSachCauHoi.Add(cauHoi5);
-
-            CauHoi cauHoi6 = new CauHoi(6, "4 + 5 = ?", "9", "10", "11", "12", "", 1);
-            danhSachCauHoi.Add(cauHoi6);
-
-            CauHoi cauHoi7 = new CauHoi(7, "2 + 6 = ?", "8", "9", "10", "11", "", 1);
-            danhSachCauHoi.Add(cauHoi7);
-
-            CauHoi cauHoi8 = new CauHoi(8, "6 - 3 = ?", "3", "4", "5", "6", "", 1);
-            danhSachCauHoi.Add(cauHoi8);
-
-            CauHoi cauHoi9 = new CauHoi(9, "8 - 4 = ?", "4", "5", "6", "7", "", 1);
-            danhSachCauHoi.Add(cauHoi9);
-
-            CauHoi cauHoi10 = new CauHoi(10, "7 + 3 = ?", "10", "11", "12", "13", "", 1);
-            danhSachCauHoi.Add(cauHoi10);
-
-
-            // Tạo một bộ câu hỏi mới
-            BoCauHoi boCauHoi = new BoCauHoi(
-                id: 1, // Mã bộ câu hỏi
-                tenBo: "Bộ câu hỏi toán cấp 1", // Tên bộ câu hỏi
-                lop: "Cấp 1", // Lớp học
-                mon: "Toán" // Môn học
-            );
-
-            // Thêm danh sách câu hỏi vào bộ câu hỏi
-            // Thêm danh sách câu hỏi vào bộ câu hỏi
-            boCauHoi.DanhSachCauHoi.AddRange(danhSachCauHoi);
-
-            // Gán boCauHoi cho thuộc tính h của form
-            h = boCauHoi;
-        }
+        
     }
 }

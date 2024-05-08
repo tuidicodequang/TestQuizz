@@ -33,8 +33,36 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,21 +74,74 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaiKiemTra.cs" />
-    <Compile Include="BoCauHoi.cs" />
-    <Compile Include="CauHoi.cs" />
-    <Compile Include="CursorsCustom.cs" />
+    <Compile Include="baikiemtraHS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baikiemtraHS.designer.cs">
+      <DependentUpon>baikiemtraHS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CursorsCustom.cs" />
+    <Compile Include="DAO\Database.cs" />
+    <Compile Include="DAO\DBUtils.cs" />
+    <Compile Include="FBoCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FBoCauHoi.designer.cs">
+      <DependentUpon>FBoCauHoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FChonCapTuongUng.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FChonCapTuongUng.designer.cs">
       <DependentUpon>FChonCapTuongUng.cs</DependentUpon>
     </Compile>
+    <Compile Include="FDanhSachHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDanhSachHocSinh.designer.cs">
+      <DependentUpon>FDanhSachHocSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FGiaoVien.designer.cs">
+      <DependentUpon>FGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fhocsinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fhocsinh.designer.cs">
+      <DependentUpon>Fhocsinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLamBaiKiemTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLamBaiKiemTra.designer.cs">
+      <DependentUpon>FLamBaiKiemTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Flogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Flogin.designer.cs">
+      <DependentUpon>Flogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormNhap.Designer.cs">
       <DependentUpon>FormNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FShowDanhSachCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FShowDanhSachCauHoi.designer.cs">
+      <DependentUpon>FShowDanhSachCauHoi.cs</DependentUpon>
     </Compile>
     <Compile Include="FTruyTimKhoBau.cs">
       <SubType>Form</SubType>
@@ -80,17 +161,11 @@
     <Compile Include="FBatBong.Designer.cs">
       <DependentUpon>FBatBong.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="FLoading.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="FLoading.Designer.cs">
+      <DependentUpon>FLoading.cs</DependentUpon>
     </Compile>
     <Compile Include="Fdapde.cs">
       <SubType>Form</SubType>
@@ -98,13 +173,53 @@
     <Compile Include="Fdapde.designer.cs">
       <DependentUpon>Fdapde.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItemBaiKiemTra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ItemBaiKiemTra.designer.cs">
+      <DependentUpon>ItemBaiKiemTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BaiKiemTra.cs" />
+    <Compile Include="Model\BaiLam.cs" />
+    <Compile Include="Model\BoCauHoi.cs" />
+    <Compile Include="Model\CauHoi.cs" />
+    <Compile Include="Model\ChiTietBaiLam.cs" />
+    <Compile Include="Model\GiaoVien.cs" />
+    <Compile Include="Model\HocSinh.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="baikiemtraHS.resx">
+      <DependentUpon>baikiemtraHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FBoCauHoi.resx">
+      <DependentUpon>FBoCauHoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FChonCapTuongUng.resx">
       <DependentUpon>FChonCapTuongUng.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FDanhSachHocSinh.resx">
+      <DependentUpon>FDanhSachHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FGiaoVien.resx">
+      <DependentUpon>FGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fhocsinh.resx">
+      <DependentUpon>Fhocsinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLamBaiKiemTra.resx">
+      <DependentUpon>FLamBaiKiemTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Flogin.resx">
+      <DependentUpon>Flogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormNhap.resx">
       <DependentUpon>FormNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FShowDanhSachCauHoi.resx">
+      <DependentUpon>FShowDanhSachCauHoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FTruyTimKhoBau.resx">
       <DependentUpon>FTruyTimKhoBau.cs</DependentUpon>
@@ -115,15 +230,16 @@
     <EmbeddedResource Include="FBatBong.resx">
       <DependentUpon>FBatBong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="FLoading.resx">
+      <DependentUpon>FLoading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fdapde.resx">
       <DependentUpon>Fdapde.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ItemBaiKiemTra.resx">
+      <DependentUpon>ItemBaiKiemTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -187,6 +303,15 @@
     <None Include="Resources\backgroundwin.png" />
     <None Include="Resources\backgroudaicapload.jpg" />
     <None Include="Resources\backgroundlatThe.png" />
+    <Content Include="Resources\akv.png" />
+    <None Include="Resources\akv1.png" />
+    <Content Include="Resources\asbc.png" />
+    <None Include="Resources\asbc1.png" />
+    <None Include="Resources\BackGroundLop.png" />
+    <None Include="Resources\backgroundFGV.jpg" />
+    <None Include="Resources\backgroundHS.png" />
+    <None Include="Resources\backgroundHS1.png" />
+    <None Include="Resources\backgroundHS2.png" />
     <Content Include="Resources\caybua.png" />
     <Content Include="Resources\chup banh.mp4" />
     <Content Include="Resources\chuphut %28online-video-cutter.com%29.mp4" />
@@ -226,8 +351,28 @@
     <None Include="Resources\ditimkhobau.png" />
     <None Include="Resources\LoadDapDe.png" />
     <None Include="Resources\backgroundwinchontuongung.png" />
+    <None Include="Resources\NenLoGin.png" />
+    <None Include="Resources\turn-back.png" />
+    <None Include="Resources\key.png" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\LabelTenGV.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\icons8-math-80.png" />
+    <None Include="Resources\icons8-teaching-96.png" />
+    <None Include="Resources\icons8-book-96.png" />
+    <None Include="Resources\icons8-lab-100.png" />
+    <None Include="Resources\icons8-abc-64.png" />
+    <None Include="Resources\icons8-earth-planet-96.png" />
     <Content Include="Resources\xechayvuotchuongngaivat.mp4" />
     <None Include="Resources\vuotchuongngaivat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="GemBox.Document">
+      <Version>35.0.1706</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Office.Interop.Word">
+      <Version>15.0.4797.1004</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

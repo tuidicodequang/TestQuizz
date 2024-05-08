@@ -17,12 +17,11 @@ namespace TestQuizz
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // Application.Run(new FVuotChuongNgaiVat());
-            //  Application.Run(new Fdapde());
-            //Application.Run(new FBatBong());
-            // Application.Run(new FChonCapTuongUng());
-            // Application.Run(new FTruyTimKhoBau());
-            Application.Run(new Form4());
+
+            Application.Run(new Login());
+           // Application.Run(new Form1());
+         
+
         }
     }
 }

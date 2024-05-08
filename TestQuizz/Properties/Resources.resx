@@ -118,167 +118,223 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="icons8-teaching-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-teaching-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bangdiemgamede" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bangdiemgamede.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Picture3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Picture3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backgroundHS1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundHS1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Picture13" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Picture13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-lab-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-lab-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Picture11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Picture11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="key" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\key.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="chayxegif" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chayxegif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Khoa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Khoa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Picture62" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Picture62.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bangdiemduaxe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bangdiemduaxe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bangdiemdabanh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bangdiemdabanh1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sairoidapde" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sairoidapde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="backgrouddapde2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backgrouddapde2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="backgroundlatThe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backgroundlatThe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="start" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="vuotchuongngaivat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vuotchuongngaivat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DongHoXe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DongHoXe.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="loadingVCNV" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loadingVCNV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Picture5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Picture5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dungroibeoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dungroibeoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="backgorundkhobau" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backgorundkhobau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Picture12" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Picture12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LoadDapDe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoadDapDe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bang cau hoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bang cau hoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dauX" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dauX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Picture2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Picture2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="backgroundwin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backgroundwin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Picture94" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Picture94.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Screenshot 2024-04-10 145814" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Screenshot 2024-04-10 145814.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="conde" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\conde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bangdiemduaxe1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bangdiemduaxe1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="x-no" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\x-no.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Picture1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Picture1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Picture10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Picture10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Picture4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Picture4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="backgroudaicapload" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backgroudaicapload.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  
-  <data name="bangdiemlaixe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bangdiemlaixe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="khung banh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\khung banh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dungdapde" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dungdapde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bangdiemdabanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bangdiemdabanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="backgrouddapde4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backgrouddapde4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ditimkhobau" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ditimkhobau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="raising-hands-thumbs-up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\raising-hands-thumbs-up.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Picture7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Picture7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Picture41" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Picture41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sairoibeoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sairoibeoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Picture8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Picture8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LabelTenGV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LabelTenGV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chạy xe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chạy xe.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="danhdau" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\danhdau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Picture2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Picture2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="raising-hands-thumbs-up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\raising-hands-thumbs-up.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="condenhaymua" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\condenhaymua.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Picture101" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Picture10.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="vuotchuongngaivat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vuotchuongngaivat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bangdiemdapde" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bangdiemdapde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bangdiemduaxe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bangdiemduaxe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backgroundFGV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundFGV.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bangdiemlaixe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bangdiemlaixe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Picture11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backgrouddapde4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgrouddapde4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Picture12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dauX" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dauX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-abc-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-abc-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LoadDapDe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoadDapDe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="danhdau" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\danhdau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Screenshot 2024-04-10 145814" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot 2024-04-10 145814.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backgroundlatThe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundlatThe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sairoibeoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sairoibeoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Bangdiem1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bangdiem1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="asbc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\asbc1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture101" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Picture10.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backgroundHS2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundHS2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chayxegif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chayxegif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DongHoXe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DongHoXe.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="conde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\conde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Picture1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dungdapde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dungdapde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backgroundwin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundwin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bangdiemduaxe1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bangdiemduaxe1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backgroudaicapload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroudaicapload.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bang cau hoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bang cau hoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sairoidapde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sairoidapde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Picture10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="akv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\akv1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BackGroundLop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BackGroundLop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backgroundHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundHS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backgrouddapde2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgrouddapde2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bangdiemdapde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bangdiemdapde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="khung-thanh-san-bong-min" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\khung-thanh-san-bong-min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ditimkhobau" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ditimkhobau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Picture3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="x-no" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\x-no.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NenLoGin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NenLoGin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture41" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Picture41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Picture13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dungroibeoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dungroibeoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture94" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Picture94.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Picture5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Picture8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backgorundkhobau" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgorundkhobau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-math-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-math-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="khung banh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\khung banh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="backgroundwinchontuongung" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backgroundwinchontuongung.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Khoa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Khoa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="turn-back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\turn-back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bangdiemdabanh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bangdiemdabanh1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bangdiemdabanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bangdiemdabanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-book-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-book-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loadingVCNV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loadingVCNV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Picture4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture62" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Picture62.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Picture7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-earth-planet-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-earth-planet-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
