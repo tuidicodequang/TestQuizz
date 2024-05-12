@@ -117,18 +117,65 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="richTextBox1.Text" xml:space="preserve">
-    <value>Chào các bạn than mến! Giờ vận động thể thao đến rồi. Hãy cùng chơi bóng đá với ếch thủ môn nhé. Bạn hãy giúp ếch chụp bóng bằng cách trả lời câu hỏi chính xác nhất nhé. Bạn sẽ được tặng 10 điểm với mỗi câu trả lời đúng. Cố lên nhé, hãy giúp ếch thủ môn chụp được nhiều bóng nhất có thể.</value>
-  </data>
-  <data name="axWindowsMediaPlayer1.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="TbXacnhanMK.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
-        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACFTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5BeEhvc3QrU3RhdGUBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAuQAAAAIB
-        AAAAAQAAAAAAAAAAAAAAAKQAAAABAwAACAACAAAAAAAFAAAAAAAAAPA/AwAAAAAABQAAAAAAAAAAAAgA
-        AgAAAAAAAwABAAAACwAAAAMAAAAAAAsA//8IAAIAAAAAAAMAMgAAAAsAAAAIAAoAAABuAG8AbgBlAAAA
-        CwD//wsAAAALAAAACwD//wsAAAAIAAIAAAAAAAgAAgAAAAAACAACAAAAAAAIAAIAAAAAAAsAAABgbwAA
-        DzgAAAs=
+        iVBORw0KGgoAAAANSUhEUgAAATYAAAApCAYAAAC/SwVTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAM6SURBVHhe7d2/axNhHMfxGzs6dnR0dOzo2ElcBEdH8S9w
+        dHAQ3Bwc3Jz9B5xsc3fJNaH0B4VahFwJJZyYhGssMcZQzueTfkVifxgxtXnS9wueIaRNtjffu8tzFwDA
+        tbeysrLk1tNyuZy4tRlFUWt1dbVgsVisaSw1RW3RUmvcWrb8TJf74BvuS16HYdit1Wr5/v5+0el0ijzP
+        i36/XwDAtKgpaouWWrOxsZGXSqVhHMdvXYtuWpb+javnc/eBeaPRGA4GA/tqAPh/jo+PiyzLikqlkmvI
+        coFbsET9HZvSqvV6vT8cDu3jAeDqKHAaslybPrpGLVquJqNxL0mSD+12mxENwMw5OjrS9Ja5Vt22bF1M
+        k5qipn8EgFmlU2OuVZ81iFm+zqfDTyY1AD7o9Xqa3FINZJaw01zUXqZpymVOAN7Isuy7i9s7y9g4V7zF
+        OI67OjkHAD5ZW1s7PPN8my6h6mqD/R0AeKPVahWuYe8tZydc6RbCMPzCzzoA+CqKop6OPC1ro7At69e9
+        9j4AeGdvb09he2RZG+0ueHVwcGBvA4B/Th2OuheJ9n4CgK/00w83pDUta0EQx3HKD3IB+EzXCEql0lfL
+        WhDoBRcOAPhOtz2yrAWBXgCA7wgbgLlD2ADMHcIGYO4QNgBzh7ABmDuEDcDcGQubngDD7YoA+G4sbNqG
+        oO0IAOArDWca0ixro72im3qGHwD4Ss8jdUNay7I22iv6ptls2tsA4B/dyEM39LCsje7H9nB3d5dd8AC8
+        labp0B2KPrOsnTxyLwzDb/Y+AHjnzOce6AZtulEbAPhGt13T7dcsZ7+odCqe/R0AeGN7e1vT2j3L2Tim
+        NgC+OXda+8kVbzFJkoYumwLArNMNcqvV6ifXrluWsbPZIWmbnQgAZt3W1lYniqL7lq+LubHuruI2GAzs
+        3wFgdmhSU9TK5fJjy9ZkNLlVKpWMHQkAZonOqenwc+JJ7Xc656btVuvr6zlPsQJwlXTuf2dnp6sLBX88
+        pzYJ9yF39GFuguvW6/WhpjjOwQG4bGpNo9EoarVarn2grkUPLEvTo0q69URTnHbR6xYhLBaLdVlLrQnD
+        8IXrzpJlCACuoyD4ARkzItlERrDhAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="TBmkMoi.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAATYAAAApCAYAAAC/SwVTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAM6SURBVHhe7d2/axNhHMfxGzs6dnR0dOzo2ElcBEdH8S9w
+        dHAQ3Bwc3Jz9B5xsc3fJNaH0B4VahFwJJZyYhGssMcZQzueTfkVifxgxtXnS9wueIaRNtjffu8tzFwDA
+        tbeysrLk1tNyuZy4tRlFUWt1dbVgsVisaSw1RW3RUmvcWrb8TJf74BvuS16HYdit1Wr5/v5+0el0ijzP
+        i36/XwDAtKgpaouWWrOxsZGXSqVhHMdvXYtuWpb+javnc/eBeaPRGA4GA/tqAPh/jo+PiyzLikqlkmvI
+        coFbsET9HZvSqvV6vT8cDu3jAeDqKHAaslybPrpGLVquJqNxL0mSD+12mxENwMw5OjrS9Ja5Vt22bF1M
+        k5qipn8EgFmlU2OuVZ81iFm+zqfDTyY1AD7o9Xqa3FINZJaw01zUXqZpymVOAN7Isuy7i9s7y9g4V7zF
+        OI67OjkHAD5ZW1s7PPN8my6h6mqD/R0AeKPVahWuYe8tZydc6RbCMPzCzzoA+CqKop6OPC1ro7At69e9
+        9j4AeGdvb09he2RZG+0ueHVwcGBvA4B/Th2OuheJ9n4CgK/00w83pDUta0EQx3HKD3IB+EzXCEql0lfL
+        WhDoBRcOAPhOtz2yrAWBXgCA7wgbgLlD2ADMHcIGYO4QNgBzh7ABmDuEDcDcGQubngDD7YoA+G4sbNqG
+        oO0IAOArDWca0ixro72im3qGHwD4Ss8jdUNay7I22iv6ptls2tsA4B/dyEM39LCsje7H9nB3d5dd8AC8
+        labp0B2KPrOsnTxyLwzDb/Y+AHjnzOce6AZtulEbAPhGt13T7dcsZ7+odCqe/R0AeGN7e1vT2j3L2Tim
+        NgC+OXda+8kVbzFJkoYumwLArNMNcqvV6ifXrluWsbPZIWmbnQgAZt3W1lYniqL7lq+LubHuruI2GAzs
+        3wFgdmhSU9TK5fJjy9ZkNLlVKpWMHQkAZonOqenwc+JJ7Xc656btVuvr6zlPsQJwlXTuf2dnp6sLBX88
+        pzYJ9yF39GFuguvW6/WhpjjOwQG4bGpNo9EoarVarn2grkUPLEvTo0q69URTnHbR6xYhLBaLdVlLrQnD
+        8IXrzpJlCACuoyD4ARkzItlERrDhAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="TbMKcu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAATYAAAApCAYAAAC/SwVTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAM6SURBVHhe7d2/axNhHMfxGzs6dnR0dOzo2ElcBEdH8S9w
+        dHAQ3Bwc3Jz9B5xsc3fJNaH0B4VahFwJJZyYhGssMcZQzueTfkVifxgxtXnS9wueIaRNtjffu8tzFwDA
+        tbeysrLk1tNyuZy4tRlFUWt1dbVgsVisaSw1RW3RUmvcWrb8TJf74BvuS16HYdit1Wr5/v5+0el0ijzP
+        i36/XwDAtKgpaouWWrOxsZGXSqVhHMdvXYtuWpb+javnc/eBeaPRGA4GA/tqAPh/jo+PiyzLikqlkmvI
+        coFbsET9HZvSqvV6vT8cDu3jAeDqKHAaslybPrpGLVquJqNxL0mSD+12mxENwMw5OjrS9Ja5Vt22bF1M
+        k5qipn8EgFmlU2OuVZ81iFm+zqfDTyY1AD7o9Xqa3FINZJaw01zUXqZpymVOAN7Isuy7i9s7y9g4V7zF
+        OI67OjkHAD5ZW1s7PPN8my6h6mqD/R0AeKPVahWuYe8tZydc6RbCMPzCzzoA+CqKop6OPC1ro7At69e9
+        9j4AeGdvb09he2RZG+0ueHVwcGBvA4B/Th2OuheJ9n4CgK/00w83pDUta0EQx3HKD3IB+EzXCEql0lfL
+        WhDoBRcOAPhOtz2yrAWBXgCA7wgbgLlD2ADMHcIGYO4QNgBzh7ABmDuEDcDcGQubngDD7YoA+G4sbNqG
+        oO0IAOArDWca0ixro72im3qGHwD4Ss8jdUNay7I22iv6ptls2tsA4B/dyEM39LCsje7H9nB3d5dd8AC8
+        labp0B2KPrOsnTxyLwzDb/Y+AHjnzOce6AZtulEbAPhGt13T7dcsZ7+odCqe/R0AeGN7e1vT2j3L2Tim
+        NgC+OXda+8kVbzFJkoYumwLArNMNcqvV6ifXrluWsbPZIWmbnQgAZt3W1lYniqL7lq+LubHuruI2GAzs
+        3wFgdmhSU9TK5fJjy9ZkNLlVKpWMHQkAZonOqenwc+JJ7Xc656btVuvr6zlPsQJwlXTuf2dnp6sLBX88
+        pzYJ9yF39GFuguvW6/WhpjjOwQG4bGpNo9EoarVarn2grkUPLEvTo0q69URTnHbR6xYhLBaLdVlLrQnD
+        8IXrzpJlCACuoyD4ARkzItlERrDhAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

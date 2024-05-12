@@ -15,7 +15,7 @@ namespace TestQuizz
 {
     public partial class FLoading : Form
     {
-
+        public int remainingSeconds { get; set; }
         public List<CauHoi> danhSachCauHoi { get; set; }
         public FVuotChuongNgaiVat f1 { get; set; }
         public FBatBong f2 { get; set; }
@@ -23,18 +23,26 @@ namespace TestQuizz
         public FTruyTimKhoBau f4 { get; set; }
         public FChonCapTuongUng f5 { get; set; }
         public string Path { get; set; }
-        public string maBL {  get; set; }
-       
-        public FLoading(string path, List<CauHoi> cauHoiList,string MaBL)
+        public string maBL { get; set; }
+
+        public int ThoiGian { get; set; }
+
+        public HocSinh hs { get; set; }
+
+
+
+        public FLoading(string path, List<CauHoi> cauHoiList, int ThoiGian, HocSinh hs)
         {
             InitializeComponent();
             Path = path;
             danhSachCauHoi = cauHoiList;
-            maBL = MaBL;
+            this.ThoiGian = ThoiGian;
+            this.hs = hs;
+
+
             timer1.Interval = 4000;
             timer1.Start();
             ChonTroChoi(path);
-
 
         }
         void ChonTroChoi(string ganme)
@@ -43,31 +51,33 @@ namespace TestQuizz
             {
                 this.BackgroundImage = Properties.Resources.loadingVCNV;
                 if (f1 == null)
-                    f1 = new FVuotChuongNgaiVat(danhSachCauHoi);
+                {
+                    f1 = new FVuotChuongNgaiVat(danhSachCauHoi, ThoiGian, hs);
+                }
             }
-             if (ganme == "game2")
+            if (ganme == "game2")
             {
                 this.BackgroundImage = Properties.Resources.Picture8;
                 if (f2 == null)
-                    f2 = new FBatBong(danhSachCauHoi,maBL);
+                    f2 = new FBatBong(danhSachCauHoi, ThoiGian, hs);
             }
             if (ganme == "game3")
             {
                 this.BackgroundImage = Properties.Resources.LoadDapDe;
                 if (f3 == null)
-                    f3 = new Fdapde(danhSachCauHoi);
+                    f3 = new Fdapde(danhSachCauHoi, ThoiGian, hs);
             }
             if (ganme == "game4")
             {
                 this.BackgroundImage = Properties.Resources.backgroudaicapload;
                 if (f4 == null)
-                   f4= new FTruyTimKhoBau(danhSachCauHoi);
+                    f4 = new FTruyTimKhoBau(danhSachCauHoi, ThoiGian, hs);
             }
             if (ganme == "game5")
             {
-                this.BackgroundImage = Properties.Resources.ditimkhobau;
+                this.BackgroundImage = Properties.Resources.LoadCapTuTuongUng;
                 if (f5 == null)
-                    f5 = new FChonCapTuongUng(danhSachCauHoi);
+                    f5 = new FChonCapTuongUng(danhSachCauHoi, ThoiGian, hs);
             }
         }
 

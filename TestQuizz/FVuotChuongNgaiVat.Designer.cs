@@ -38,8 +38,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labeltime = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbLop = new System.Windows.Forms.Label();
+            this.lbTenHS = new System.Windows.Forms.Label();
             this.labelDiem = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelSoCau = new System.Windows.Forms.Label();
@@ -54,6 +54,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.labeltimeHT = new System.Windows.Forms.Label();
             this.labelDiemTong = new System.Windows.Forms.Label();
+            this.panelGT = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDungSai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -64,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panelGT.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonDA1
@@ -131,7 +134,7 @@
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(73, 183);
+            this.button5.Location = new System.Drawing.Point(544, 536);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(338, 196);
             this.button5.TabIndex = 7;
@@ -186,31 +189,31 @@
             this.labeltime.TabIndex = 12;
             this.labeltime.Text = "00:00";
             // 
-            // label3
+            // lbLop
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Black;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(237)))));
-            this.label3.Location = new System.Drawing.Point(120, 65);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 19);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "1A";
+            this.lbLop.AutoSize = true;
+            this.lbLop.BackColor = System.Drawing.Color.Black;
+            this.lbLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbLop.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbLop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(237)))));
+            this.lbLop.Location = new System.Drawing.Point(120, 65);
+            this.lbLop.Name = "lbLop";
+            this.lbLop.Size = new System.Drawing.Size(29, 19);
+            this.lbLop.TabIndex = 11;
+            this.lbLop.Text = "1A";
             // 
-            // label1
+            // lbTenHS
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(237)))));
-            this.label1.Location = new System.Drawing.Point(90, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 29);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Tiến Anh";
+            this.lbTenHS.AutoSize = true;
+            this.lbTenHS.BackColor = System.Drawing.Color.Black;
+            this.lbTenHS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbTenHS.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbTenHS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(237)))));
+            this.lbTenHS.Location = new System.Drawing.Point(90, 27);
+            this.lbTenHS.Name = "lbTenHS";
+            this.lbTenHS.Size = new System.Drawing.Size(109, 29);
+            this.lbTenHS.TabIndex = 10;
+            this.lbTenHS.Text = "Tiến Anh";
             // 
             // labelDiem
             // 
@@ -230,8 +233,8 @@
             this.panel2.Controls.Add(this.labelSoCau);
             this.panel2.Controls.Add(this.labeltime);
             this.panel2.Controls.Add(this.labelDiem);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lbLop);
+            this.panel2.Controls.Add(this.lbTenHS);
             this.panel2.Controls.Add(this.pictureBox7);
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Location = new System.Drawing.Point(438, 50);
@@ -365,7 +368,7 @@
             this.labeltimeHT.ForeColor = System.Drawing.Color.FloralWhite;
             this.labeltimeHT.Location = new System.Drawing.Point(783, 393);
             this.labeltimeHT.Name = "labeltimeHT";
-            this.labeltimeHT.Size = new System.Drawing.Size(258, 97);
+            this.labeltimeHT.Size = new System.Drawing.Size(252, 96);
             this.labeltimeHT.TabIndex = 18;
             this.labeltimeHT.Text = "00:00";
             // 
@@ -382,6 +385,30 @@
             this.labelDiemTong.TabIndex = 17;
             this.labelDiemTong.Text = "0";
             // 
+            // panelGT
+            // 
+            this.panelGT.BackColor = System.Drawing.Color.Transparent;
+            this.panelGT.BackgroundImage = global::TestQuizz.Properties.Resources.khunggt;
+            this.panelGT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelGT.Controls.Add(this.button5);
+            this.panelGT.Controls.Add(this.richTextBox1);
+            this.panelGT.Location = new System.Drawing.Point(133, 41);
+            this.panelGT.Name = "panelGT";
+            this.panelGT.Size = new System.Drawing.Size(1419, 702);
+            this.panelGT.TabIndex = 23;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(55)))));
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.richTextBox1.ForeColor = System.Drawing.SystemColors.Info;
+            this.richTextBox1.Location = new System.Drawing.Point(213, 88);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(1041, 479);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
             // FVuotChuongNgaiVat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -390,7 +417,7 @@
             this.BackgroundImage = global::TestQuizz.Properties.Resources.vuotchuongngaivat;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1685, 785);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.panelGT);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.axWindowsMediaPlayer2);
@@ -416,6 +443,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panelGT.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -432,8 +460,8 @@
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.PictureBox pictureBoxDungSai;
         private System.Windows.Forms.Label labeltime;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbLop;
+        private System.Windows.Forms.Label lbTenHS;
         private System.Windows.Forms.Label labelDiem;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox6;
@@ -448,5 +476,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label labeltimeHT;
         private System.Windows.Forms.Label labelDiemTong;
+        private System.Windows.Forms.Panel panelGT;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

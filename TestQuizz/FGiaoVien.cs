@@ -82,5 +82,23 @@ namespace TestQuizz
         {
             this.Close();
         }
+
+        private void bttchangePass_Click(object sender, EventArgs e)
+        {
+            FDoiMK f = new FDoiMK();
+            f.IDTK = giaovien.IDTK;
+            f.ShowDialog();
+        }
+
+      
+        private void bttchangePass_MouseMove(object sender, MouseEventArgs e)
+        {
+            bttchangePass.ForeColor = Color.Blue;
+        }
+
+        private void bttchangePass_MouseLeave(object sender, EventArgs e)
+        {
+            bttchangePass.ForeColor = Color.LightGoldenrodYellow;
+        }
     }
 }

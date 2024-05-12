@@ -1,8 +1,10 @@
-﻿using System;
+﻿using HarfBuzzSharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -14,33 +16,42 @@ namespace TestQuizz
 {
     public partial class FVuotChuongNgaiVat : Form
     {
-        private int remainingSeconds = 60;
-        private int TongThoiGian= 0;
+        public int remainingSeconds { get; set; }
+        public HocSinh HocSinh { get; set; }
+
+
+        private int TongThoiGian = 0;
         private int currentIndex = 0; // Chỉ số của câu hỏi hiện tại
         List<CauHoi> danhSachCauHoi = new List<CauHoi>();
-        private string videoPath = "C:\\Users\\manno\\OneDrive\\Desktop\\hoc c#\\TestQuizz\\TestQuizz\\Resources\\xechayvuotchuongngaivat.mp4";
-        private int[] timePoints = { 4, 8, 14, 19, 24,29,35,40,44, 50 }; // Các thời điểm để pasue video nè
+        private string videoPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "TestQuizz", "Resources", "xechayvuotchuongngaivat.mp4");
+        private int[] timePoints = { 4, 8, 14, 19, 24, 29, 35, 40, 44, 50 }; // Các thời điểm để pasue video nè
         private int currentTimePointIndex = -1;
         private Timer timer;
         private Timer timer1;
         private Timer timer2;
         private Timer timerLoad;
-       
+
         int diem = 0;
         public double Diem { get { return diem; } }
 
-        public FVuotChuongNgaiVat(List<CauHoi> cauhoiList)
+        private List<ChiTietCauTraLoi> dscautraloi = new List<ChiTietCauTraLoi>();
+        public List<ChiTietCauTraLoi> dsCauTraLoi { get { return dscautraloi; } }
+
+        public FVuotChuongNgaiVat(List<CauHoi> cauhoiList, int ThoiGian, HocSinh hs)
         {
             InitializeComponent();
-          
+
             CenterToScreen();
             InitializeMediaPlayer();
             InitializeTimer();
             danhSachCauHoi = cauhoiList;
+            this.remainingSeconds = ThoiGian;
+            this.HocSinh = hs;
+            lbTenHS.Text = hs.TenHS;
+            lbLop.Text = hs.Tenlop;
             UpdateQuestion();
-
         }
-       
+
         public void HoanThanh()
         {
             panel1.Visible = false;
@@ -171,6 +182,7 @@ namespace TestQuizz
 
         private void button5_Click(object sender, EventArgs e)
         {
+            panelGT.Visible = false;
             timerLoad.Start();
             axWindowsMediaPlayer2.BringToFront(); // Đưa control video lên trên cùng
             axWindowsMediaPlayer2.Visible=false;

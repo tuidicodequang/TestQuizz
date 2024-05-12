@@ -35,6 +35,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.paneltrangcon = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.bttchangePass = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneltrangcon.SuspendLayout();
@@ -105,6 +106,7 @@
             this.paneltrangcon.BackColor = System.Drawing.Color.Gainsboro;
             this.paneltrangcon.BackgroundImage = global::TestQuizz.Properties.Resources.backgroundFGV;
             this.paneltrangcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.paneltrangcon.Controls.Add(this.bttchangePass);
             this.paneltrangcon.Controls.Add(this.tableLayoutPanel1);
             this.paneltrangcon.Controls.Add(this.panel1);
             this.paneltrangcon.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -128,6 +130,27 @@
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // bttchangePass
+            // 
+            this.bttchangePass.BackColor = System.Drawing.Color.Transparent;
+            this.bttchangePass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bttchangePass.FlatAppearance.BorderSize = 0;
+            this.bttchangePass.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.bttchangePass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.bttchangePass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttchangePass.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.bttchangePass.ForeColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.bttchangePass.Location = new System.Drawing.Point(1142, 625);
+            this.bttchangePass.Name = "bttchangePass";
+            this.bttchangePass.Size = new System.Drawing.Size(157, 55);
+            this.bttchangePass.TabIndex = 4;
+            this.bttchangePass.Text = "Đổi mật khẩu";
+            this.bttchangePass.UseVisualStyleBackColor = false;
+            this.bttchangePass.Click += new System.EventHandler(this.bttchangePass_Click);
+        
+            this.bttchangePass.MouseLeave += new System.EventHandler(this.bttchangePass_MouseLeave);
+            this.bttchangePass.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bttchangePass_MouseMove);
             // 
             // FGiaoVien
             // 
@@ -160,5 +183,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel paneltrangcon;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bttchangePass;
     }
 }

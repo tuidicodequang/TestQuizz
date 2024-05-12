@@ -162,10 +162,9 @@ namespace TestQuizz
             DataTable dt = db.Excute(strSQL);
             return dt;
         }
-
         public DataTable getBaiKiemTraHSDaLam(string mon, HocSinh hs)
         {
-            string strSQL = "SELECT DISTINCT MaBaiKT, TenBaiKT, ThoiGianBatDau, ThoiGianKetThuc, ThoiGianMax, BaiKiemTra.TenLop , MaBoCH,Mon" +
+            string strSQL = "SELECT DISTINCT BaiKiemTra.MaBaiKT, BaiKiemTra.TenBaiKT, BaiKiemTra.ThoiGianBatDau, BaiKiemTra.ThoiGianKetThuc, BaiKiemTra.ThoiGianMax, BaiKiemTra.TenLop, BaiKiemTra.MaBoCH, BaiKiemTra.Mon " +
                             "FROM BaiKiemTra " +
                             "INNER JOIN HocSinh ON HocSinh.TenLop = BaiKiemTra.TenLop " +
                             "WHERE BaiKiemTra.Mon = '" + mon + "' " +
@@ -176,6 +175,7 @@ namespace TestQuizz
             DataTable dt = db.Excute(strSQL);
             return dt;
         }
+
 
         public DataTable GetHocSinhListByKeyword(string keyword)
         {
@@ -195,7 +195,79 @@ namespace TestQuizz
             DataTable dt = db.Excute(query);
             return dt;
         }
+        public void updateTaikhoanHocSinh(string id, string mkmoi, string mkcu)
+        {
+                
+                string strSQL = "UPDATE [dbo].[TaiKhoan] SET MatKhau = '"+mkmoi+ "' WHERE ID = '"+id+ "' AND MatKhau = '"+mkcu+"'";
+                db.ExcuteNonQuery(strSQL);
+            
+        }
+        public int CheckDoiMatKhau (string id, string mk)
+        {
+            string sql = "IF EXISTS (SELECT 1 FROM [dbo].[TaiKhoan] WHERE ID = '"+id+ "' AND MatKhau = '"+mk+"') SELECT 1 ELSE SELECT 0";
 
+            int kq =   db.ExecuteScalar(sql);
+            return kq ;
+        }
+
+        public void InsertChiTietBaiLam(string maBL, string cauhoi, string cautraloi, int trangthai)
+        {
+            string strSQL = "Insert into ChiTietBaiLam values ('" + maBL + "','" + cauhoi + "','" + cautraloi + "','" + trangthai + "')";
+            db.ExcuteNonQuery(strSQL);
+        }
+
+        public DataTable getChiTietBaiLam(BaiLam bailam)
+        {
+            string strSQL = "select CauHoi,CauTraLoi,TrangThai from ChiTietBaiLam where MaBL='" + bailam.MaBL + "'";
+            DataTable dt = db.Excute(strSQL);
+            return dt;
+        }
+        public void InsertBaiLam(BaiLam bailam)
+        {
+
+            string strSQL = "Insert into BaiLam values ('" + bailam.MaBL + "','" + bailam.Diem + "','" + bailam.Thoigian + "','" + bailam.MaBaiKT + "','" + bailam.MaHS + "')";
+            db.ExcuteNonQuery(strSQL);
+        }
+        public DataTable TimKiemBaiDaLam(string tenBaiLam, DateTime ngayThang, HocSinh hs, string mon)
+        {
+            // Chuyển ngày tháng thành chuỗi đúng định dạng SQL (YYYY-MM-DD)
+
+            // Tạo câu truy vấn SQL
+            string strSQL = "SELECT DISTINCT MaBaiKT, TenBaiKT, ThoiGianBatDau, ThoiGianKetThuc, ThoiGianMax, BaiKiemTra.TenLop, MaBoCH, Mon " +
+                            "FROM BaiKiemTra " +
+                            "INNER JOIN HocSinh ON HocSinh.TenLop = BaiKiemTra.TenLop " +
+                            "WHERE (TenBaiKT LIKE '%" + tenBaiLam + "%' OR '" + tenBaiLam + "' IS NULL) " +
+                            "AND BaiKiemTra.Mon = '" + mon + "' " +
+                            "AND BaiKiemTra.MaBaiKT IN (" +
+                            "   SELECT DISTINCT MaBaiKT " +
+                            "   FROM BaiLam " +
+                            "   WHERE MaHS = '" + hs.MaHS + "')" +
+                            "AND '" + ngayThang.ToString("yyyy-MM-dd") + "' BETWEEN ThoiGianBatDau AND ThoiGianKetThuc";
+
+            // Thực hiện truy vấn và lấy dữ liệu
+            DataTable dt = db.Excute(strSQL);
+            return dt;
+        }
+        public DataTable TimKiemBaiChuaLam(string tenBaiLam, DateTime ngayThang, HocSinh hs, string mon)
+        {
+            // Chuyển ngày tháng thành chuỗi đúng định dạng SQL (YYYY-MM-DD)
+
+            // Tạo câu truy vấn SQL
+            string strSQL = "SELECT DISTINCT MaBaiKT, TenBaiKT, ThoiGianBatDau, ThoiGianKetThuc, ThoiGianMax, BaiKiemTra.TenLop, MaBoCH, Mon " +
+                            "FROM BaiKiemTra " +
+                            "INNER JOIN HocSinh ON HocSinh.TenLop = BaiKiemTra.TenLop " +
+                            "WHERE (TenBaiKT LIKE '%" + tenBaiLam + "%' OR '" + tenBaiLam + "' IS NULL) " +
+                            "AND BaiKiemTra.Mon = '" + mon + "' " +
+                            "AND BaiKiemTra.MaBaiKT NOT IN (" +
+                            "   SELECT DISTINCT MaBaiKT " +
+                            "   FROM BaiLam " +
+                            "   WHERE MaHS = '" + hs.MaHS + "')" +
+                            "AND '" + ngayThang.ToString("yyyy-MM-dd") + "' BETWEEN ThoiGianBatDau AND ThoiGianKetThuc";
+
+            // Thực hiện truy vấn và lấy dữ liệu
+            DataTable dt = db.Excute(strSQL);
+            return dt;
+        }
 
     }
 }

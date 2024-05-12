@@ -16,38 +16,35 @@ namespace TestQuizz
 {
     public partial class Fdapde : Form
     {
+        public int remainingSeconds { get; set; }
+        public HocSinh hs { get; set; }
+
         private int currentIndex = 0; // Chỉ số của câu hỏi hiện tại
         List<CauHoi> danhSachCauHoi = new List<CauHoi>();
-        public int remainingSeconds = 14;
-        int TongThoiGian= -4;
+
+        int TongThoiGian = 0;
 
         CursorsCustom h = new CursorsCustom();
-     
+
         Timer timer = new Timer();
-        Timer timer2 = new Timer(); 
+        Timer timer2 = new Timer();
         Timer timer3 = new Timer();
         Timer timer4 = new Timer();
         int diem = 0;
         public double Diem { get { return diem; } }
 
 
-        public Fdapde(List<CauHoi> cauhoiList)
+        private List<ChiTietCauTraLoi> dscautraloi = new List<ChiTietCauTraLoi>();
+        public List<ChiTietCauTraLoi> dsCauTraLoi { get { return dscautraloi; } }
+
+
+        public Fdapde(List<CauHoi> cauhoiList, int ThoiGian, HocSinh hs)
         {
             InitializeComponent();
             CenterToScreen();
-            UpdatelabelDiem();
-            timer.Interval = 1500;
-            timer.Tick += Timer_Tick;
-            timer2.Interval = 1000;
-            timer2.Tick += timer2_Tick;
-            timer3.Interval = 2000;
-            timer3.Tick += Timer3_Tick;
-            timer4.Interval = 2000; // Thời gian ẩn ảnh conde và hiện lại các panel sau 2 giây
-            timer4.Tick += Timer4_Tick;
-            danhSachCauHoi=cauhoiList;
-            
-            UpdateQuestion();
-            timer2.Start();
+            this.danhSachCauHoi = cauhoiList;
+            this.remainingSeconds = ThoiGian;
+            this.hs = hs;
         }
         public void HoanThanh()
         {
@@ -211,11 +208,6 @@ namespace TestQuizz
             button4.Visible = true;
         }
 
-
-
-
-      
-
         private void button3_MouseMove(object sender, MouseEventArgs e)
         {
           h.ChangeCursors(h.bua);
@@ -236,6 +228,20 @@ namespace TestQuizz
             h.ChangeCursors(h.bua);
         }
 
-        
+        private void bttOK_Click(object sender, EventArgs e)
+        {
+            panelGT.Visible = false;
+            UpdatelabelDiem();
+            UpdateQuestion();
+            timer.Interval = 1500;
+            timer.Tick += Timer_Tick;
+            timer2.Interval = 1000;
+            timer2.Tick += timer2_Tick;
+            timer3.Interval = 2000;
+            timer3.Tick += Timer3_Tick;
+            timer4.Interval = 2000; // Thời gian ẩn ảnh conde và hiện lại các panel sau 2 giây
+            timer4.Tick += Timer4_Tick;
+            timer2.Start();
+        }
     }
 }

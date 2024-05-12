@@ -15,6 +15,7 @@ namespace TestQuizz
     {
         public BaiKiemTra BaiKiemTra { get; set; }
         public HocSinh HocSinh { get; set; }
+       
         public ItemBaiKiemTra(BaiKiemTra baiKiemTra,HocSinh hocsinh)
         {
             InitializeComponent();
@@ -25,11 +26,16 @@ namespace TestQuizz
         private void ItemBaiKiemTra_Load(object sender, EventArgs e)
         {
             lbTenBaiKT.Text = BaiKiemTra.TenBaiKT.ToString();
-            lbThoiGianBatDau.Text = BaiKiemTra.ThoiGianBatDau.ToString();
-            lbThoiGianKetThuc.Text=BaiKiemTra.ThoiGianKetThuc.ToString();
+            lbThoiGianBatDau.Text = BaiKiemTra.ThoiGianBatDau.ToString("dd/MM/yyyy HH:mm");
+            lbThoiGianKetThuc.Text = BaiKiemTra.ThoiGianKetThuc.ToString("dd/MM/yyyy HH:mm");
 
         }
-
+        public void ChuyenButton(int TrangThai)
+        {
+            if (TrangThai == 0) { BTbatDau.BringToFront(); }
+            if (TrangThai == 1) { btnXemChiTiet.BringToFront(); }
+            
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn bắt đầu làm bài không", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
@@ -40,5 +46,6 @@ namespace TestQuizz
             }
         }
 
+       
     }
 }

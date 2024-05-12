@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Drawing.Printing;
 using System.Windows.Forms;
 using TestQuizz;
 using TestQuizz.Model;
@@ -8,6 +9,7 @@ namespace TestQuizz
 {
     public partial class Login : Form
     {
+        
         DBUtils db= new DBUtils();
         public Login()
         {
@@ -35,7 +37,8 @@ namespace TestQuizz
                         {
                             MaGV = gvInfo.Rows[0]["MaGV"].ToString(),
                             TenGV = gvInfo.Rows[0]["TenGV"].ToString(),
-                            BoMon = gvInfo.Rows[0]["BoMon"].ToString()
+                            BoMon = gvInfo.Rows[0]["BoMon"].ToString(),
+                            IDTK= gvInfo.Rows[0]["IDTK"].ToString()
                         };
                         FGiaoVien f = new FGiaoVien { giaovien = g };
                         this.Hide();
@@ -48,7 +51,8 @@ namespace TestQuizz
                         {
                             MaHS = hsInfo.Rows[0]["MaHS"].ToString(),
                             Tenlop = hsInfo.Rows[0]["TenLop"].ToString(),
-                            TenHS = hsInfo.Rows[0]["TenHS"].ToString()
+                            TenHS = hsInfo.Rows[0]["TenHS"].ToString(),
+                            IDTK = hsInfo.Rows[0]["IDTK"].ToString(),
                         };
                         Fhocsinh f = new Fhocsinh { hocsinh = h };
                         this.Hide();
@@ -81,5 +85,6 @@ namespace TestQuizz
                 this.Close();
             }
         }
+
     }
 }

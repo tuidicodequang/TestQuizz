@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fdapde));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -35,9 +36,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.labeltime = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labellop = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.Button();
             this.labelDiemTong = new System.Windows.Forms.Label();
@@ -57,6 +58,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelGT = new System.Windows.Forms.Panel();
+            this.bttOK = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBBut1)).BeginInit();
@@ -74,6 +78,7 @@
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelGT.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -156,9 +161,9 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.labeltime);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.labellop);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.labelName);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(1152, 22);
             this.panel1.Name = "panel1";
@@ -190,18 +195,18 @@
             this.labeltime.TabIndex = 12;
             this.labeltime.Text = "00:00";
             // 
-            // label3
+            // labellop
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(191)))), ((int)(((byte)(126)))));
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(255, 160);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 27);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "1A";
+            this.labellop.AutoSize = true;
+            this.labellop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(191)))), ((int)(((byte)(126)))));
+            this.labellop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labellop.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labellop.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labellop.Location = new System.Drawing.Point(255, 160);
+            this.labellop.Name = "labellop";
+            this.labellop.Size = new System.Drawing.Size(42, 27);
+            this.labellop.TabIndex = 11;
+            this.labellop.Text = "1A";
             // 
             // label2
             // 
@@ -216,18 +221,18 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "10/10";
             // 
-            // label1
+            // labelName
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(191)))), ((int)(((byte)(126)))));
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(245, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 27);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Tiến Anh";
+            this.labelName.AutoSize = true;
+            this.labelName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(191)))), ((int)(((byte)(126)))));
+            this.labelName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelName.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelName.Location = new System.Drawing.Point(245, 84);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(114, 27);
+            this.labelName.TabIndex = 10;
+            this.labelName.Text = "Tiến Anh";
             // 
             // pictureBox2
             // 
@@ -452,6 +457,44 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // panelGT
+            // 
+            this.panelGT.BackColor = System.Drawing.Color.Transparent;
+            this.panelGT.BackgroundImage = global::TestQuizz.Properties.Resources.khunggt;
+            this.panelGT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelGT.Controls.Add(this.bttOK);
+            this.panelGT.Controls.Add(this.richTextBox1);
+            this.panelGT.Location = new System.Drawing.Point(75, 41);
+            this.panelGT.Name = "panelGT";
+            this.panelGT.Size = new System.Drawing.Size(1419, 702);
+            this.panelGT.TabIndex = 22;
+            // 
+            // bttOK
+            // 
+            this.bttOK.BackgroundImage = global::TestQuizz.Properties.Resources.z5418767400682_08c4373207d871aeacdaadbd0b97428e1;
+            this.bttOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bttOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttOK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.bttOK.Location = new System.Drawing.Point(551, 597);
+            this.bttOK.Name = "bttOK";
+            this.bttOK.Size = new System.Drawing.Size(290, 81);
+            this.bttOK.TabIndex = 2;
+            this.bttOK.Text = "OK! Chiến thôi";
+            this.bttOK.UseVisualStyleBackColor = true;
+            this.bttOK.Click += new System.EventHandler(this.bttOK_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(55)))));
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.richTextBox1.ForeColor = System.Drawing.SystemColors.Info;
+            this.richTextBox1.Location = new System.Drawing.Point(213, 88);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(1041, 479);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
             // Fdapde
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -459,6 +502,7 @@
             this.BackgroundImage = global::TestQuizz.Properties.Resources.backgrouddapde4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1569, 785);
+            this.Controls.Add(this.panelGT);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
@@ -491,6 +535,7 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelGT.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -504,8 +549,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label labeltime;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labellop;
+        private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button textBox1;
         private System.Windows.Forms.Label labelDiemTong;
@@ -525,5 +570,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelGT;
+        private System.Windows.Forms.Button bttOK;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

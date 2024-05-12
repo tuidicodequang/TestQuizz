@@ -10,35 +10,47 @@ namespace doan
 {
     public partial class FChonCapTuongUng : Form
     {
+        public int remainingSeconds { get; set; }
+        public HocSinh hs { get; set; }
+
+
         List<string> danhSachDapAnDung = new List<string>();
-        List<CauHoi> danhSachCauHoi = new List<CauHoi>();
+        public List<CauHoi> danhSachCauHoi = new List<CauHoi>();
         private Button selectedButton;
         private List<Button> buttons = new List<Button>();
-        public BoCauHoi h = new BoCauHoi();
+
         private int m = 1;
         private int n = 11;
-        int remainingSeconds = 30;
+
         int TongThoiGian = -4;
         public double diem = 0;
         private Button[] clickedButtons = new Button[2];
         List<string> namebt = new List<string>();
         bool firstClick = true;
         Timer timer = new Timer();
-        public double Diem { get { return diem; } }
 
 
-        public FChonCapTuongUng(List<CauHoi> cauhoiList)
+
+        //dung để tryền điểm về FLamBaiKiemTra
+        public double Diem
         {
-
-            InitializeComponent();
-            danhSachCauHoi=cauhoiList;
-            timer.Interval = 1500;
-            timer.Tick += Timer_Tick;
-            timer.Start();  
-            AttachClickEventToButtons();
-            LoadCauhoivadapandung();
+            get { return diem; }
         }
 
+        private List<ChiTietCauTraLoi> dscautraloi = new List<ChiTietCauTraLoi>();
+        public List<ChiTietCauTraLoi> dsCauTraLoi { get { return dscautraloi; } }
+
+
+
+
+
+        public FChonCapTuongUng(List<CauHoi> cauhoiList, int ThoiGian, HocSinh hs)
+        {
+            InitializeComponent();
+            this.danhSachCauHoi = cauhoiList;
+            this.remainingSeconds = ThoiGian;
+            this.hs = hs;
+        }
         private void Timer_Tick(object sender, EventArgs e)
         {
             // Giảm thời gian đếm ngược mỗi lần Tick của Timer
@@ -63,6 +75,7 @@ namespace doan
             timer.Stop();
              labelTimeHT.Text = TimeSpan.FromSeconds(TongThoiGian).ToString(@"mm\:ss");
             UpdateDiemSo();
+           this.Close();
         }
         private void UpdateDiemSo()
         {
@@ -120,9 +133,9 @@ namespace doan
                 string buttonName = "button" + (i + m).ToString();
                 Button button = Controls.Find(buttonName, true).FirstOrDefault() as Button;
 
-                if (button != null && questionIndex < h.DanhSachCauHoi.Count)
+                if (button != null && questionIndex < danhSachCauHoi.Count)
                 {
-                    button.Text = h.DanhSachCauHoi[questionIndex].NoiDung;
+                    button.Text = danhSachCauHoi[questionIndex].NoiDung;
                 }
             }
 
@@ -133,9 +146,9 @@ namespace doan
                 string buttonName = "button" + (i + n).ToString();
                 Button button = Controls.Find(buttonName, true).FirstOrDefault() as Button;
 
-                if (button != null && answerIndex < h.DanhSachCauHoi.Count)
+                if (button != null && answerIndex < danhSachCauHoi.Count)
                 {
-                    button.Text = h.DanhSachCauHoi[answerIndex].DapAnDung;
+                    button.Text = danhSachCauHoi[answerIndex].DapAnDung;
                 }
             }
         }
@@ -175,6 +188,7 @@ namespace doan
                     // Nếu nút được bấm lại là nút đang được chọn, đặt trạng thái của nút này về bình thường
                     selectedButton.FlatStyle = FlatStyle.Flat;
                     selectedButton = null;
+                    clickedButton.BackColor = Color.LightSteelBlue;
                     firstClick = true;
 
                 }
@@ -266,6 +280,8 @@ namespace doan
                                 selectedButton = null;
                                 int s = int.Parse(lbSai.Text) + 1;
                                 lbSai.Text = s.ToString();
+                                if (s==20) HoanThanh() ;
+                                
                               
 
 
@@ -289,10 +305,18 @@ namespace doan
              
             }
             selectedButton = button;
-          
             selectedButton.FlatStyle = FlatStyle.Flat;
             namebt.Add(button.Name);
         }
-        
+
+        private void bttOK_Click(object sender, EventArgs e)
+        {
+            panelGT.Visible = false;
+            timer.Interval = 1500;
+            timer.Tick += Timer_Tick;
+            timer.Start();
+            AttachClickEventToButtons();
+            LoadCauhoivadapandung();
+        }
     }
 }

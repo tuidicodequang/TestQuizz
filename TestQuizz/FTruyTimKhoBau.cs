@@ -16,28 +16,34 @@ namespace TestQuizz
 {
     public partial class FTruyTimKhoBau : Form
     {
+        public int remainingSeconds { get; set; }
+        public HocSinh hs { get; set; }
+
+
         Button currentBT = new Button();
         private int currentIndex = 0; // Chỉ số của câu hỏi hiện tại
         List<CauHoi> danhSachCauHoi = new List<CauHoi>();
-        public int remainingSeconds = 14;
-        int TongThoiGian = -4;
-        CursorsCustom h = new CursorsCustom(); 
+
+        int TongThoiGian = 0;
+        CursorsCustom h = new CursorsCustom();
         int diem = 0;
         Timer timerDungSai = new Timer();
         Timer timerTinhGio = new Timer();
-        Timer timerChuyenCanh= new Timer();
+        Timer timerChuyenCanh = new Timer();
         public double Diem { get { return diem; } }
-        public FTruyTimKhoBau(List<CauHoi> cauhoiList)
+
+        private List<ChiTietCauTraLoi> dscautraloi = new List<ChiTietCauTraLoi>();
+        public List<ChiTietCauTraLoi> dsCauTraLoi { get { return dscautraloi; } }
+
+        public FTruyTimKhoBau(List<CauHoi> cauhoiList, int ThoiGian, HocSinh hs)
         {
-         
+
             InitializeComponent();
-            danhSachCauHoi = cauhoiList;
-     
-            timerDungSai.Interval = 1500;
-            timerDungSai.Tick += TimerDungSai_Tick;
-            timerTinhGio.Interval = 1000;
-            timerTinhGio.Tick += timerTinhGio_Tick;
-         
+
+            this.danhSachCauHoi = cauhoiList;
+            this.remainingSeconds = ThoiGian;
+            this.hs = hs;
+
         }
         public void HoanThanh()
         {
@@ -56,6 +62,7 @@ namespace TestQuizz
             panel3 .Visible = true;
             labelTimeHT.Text = TimeSpan.FromSeconds(TongThoiGian).ToString(@"mm\:ss");
             labelDiemTong.Text = diem.ToString();
+            this.Close();
            
 
 
@@ -133,6 +140,10 @@ namespace TestQuizz
                
             }
                 timerDungSai.Start();
+            if (currentIndex ==9 )
+            {
+                HoanThanh();
+            }
               
         }
         private void UpdatelabelDiem()
@@ -248,7 +259,17 @@ namespace TestQuizz
         {
             DanhDauButton(button10);
         }
-    }
+
+        private void bttOK_Click(object sender, EventArgs e)
+        {
+            panelGT.Visible = false;
+
+            timerDungSai.Interval = 1500;
+            timerDungSai.Tick += TimerDungSai_Tick;
+            timerTinhGio.Interval = 1000;
+            timerTinhGio.Tick += timerTinhGio_Tick;
+        }
+    } 
 }
 
 

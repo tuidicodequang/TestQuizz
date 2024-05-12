@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,37 +16,35 @@ namespace TestQuizz
 {
     public partial class FBatBong : Form
     {
+        public int remainingSeconds { get; set; }
+        public HocSinh hs { get; set; }
+
         private int currentIndex = 0; // Chỉ số của câu hỏi hiện tại
         List<CauHoi> danhSachCauHoi = new List<CauHoi>();
-        public int remainingSeconds = 14;
-        int TongThoiGian= -4;
-        public string videoPath1 = "C:\\Users\\manno\\OneDrive\\Desktop\\hoc c#\\TestQuizz\\TestQuizz\\Resources\\chup banh.mp4";
-        public string videoPath2 = "C:\\Users\\manno\\OneDrive\\Desktop\\hoc c#\\TestQuizz\\TestQuizz\\Resources\\chuphut.mp4";
+
+        int TongThoiGian = 4;
+        public string videoPath1 = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "TestQuizz", "Resources", "chup banh.mp4");
+        public string videoPath2 = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "TestQuizz", "Resources", "chuphut.mp4");
         CursorsCustom h = new CursorsCustom();
         bool isVideoLoaded = false;
         Timer timer = new Timer();
-        Timer timer2 = new Timer(); 
+        Timer timer2 = new Timer();
         int diem = 0;
-        public string maBL {  get; set; }
         public double Diem { get { return diem; } }
-        
+
+        private List<ChiTietCauTraLoi> dscautraloi = new List<ChiTietCauTraLoi>();
+        public List<ChiTietCauTraLoi> dsCauTraLoi { get { return dscautraloi; } }
 
 
 
-        public FBatBong(List<CauHoi> cauhoiList,string MaBL)
+        public FBatBong(List<CauHoi> cauhoiList, int remainingSeconds, HocSinh hs)
         {
             InitializeComponent();
+            this.remainingSeconds = remainingSeconds;
+            this.hs = hs;
             CenterToScreen();
-            UpdatelabelDiem();
-            timer.Interval = 1000;
-            timer.Tick += Timer_Tick;
-            timer2.Interval = 1000;
-            timer2.Tick += timer2_Tick;
-            InitializeMediaPlayer();
             danhSachCauHoi = cauhoiList;
-            maBL = MaBL;
-            UpdateQuestion();
-            timer2.Start();
+ 
         }
         public void HoanThanh()
         {
@@ -230,11 +229,6 @@ namespace TestQuizz
             currentIndex++; // Tăng chỉ số của câu hỏi lên một
 
         }
-
-
-
-      
-
         private void button3_MouseMove(object sender, MouseEventArgs e)
         {
           h.ChangeCursors(h.ball);
@@ -255,6 +249,24 @@ namespace TestQuizz
             h.ChangeCursors(h.ball);
         }
 
-      
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            panelGT.Visible = false;
+        }
+
+        private void bttOK_Click(object sender, EventArgs e)
+        {
+            panelGT.Visible=false;
+            UpdatelabelDiem();
+            timer.Interval = 1000;
+            timer.Tick += Timer_Tick;
+            timer2.Interval = 1000;
+            timer2.Tick += timer2_Tick;
+            InitializeMediaPlayer();
+            UpdateQuestion();
+            timer2.Start();
+        }
+
+       
     }
 }

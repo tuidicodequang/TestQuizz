@@ -293,6 +293,66 @@ namespace TestQuizz.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap batdau {
+            get {
+                object obj = ResourceManager.GetObject("batdau", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BttBack {
+            get {
+                object obj = ResourceManager.GetObject("BttBack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BttGo {
+            get {
+                object obj = ResourceManager.GetObject("BttGo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BttGo_jpg {
+            get {
+                object obj = ResourceManager.GetObject("BttGo.jpg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BttStart {
+            get {
+                object obj = ResourceManager.GetObject("BttStart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BttTimKiem {
+            get {
+                object obj = ResourceManager.GetObject("BttTimKiem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chạy_xe {
             get {
                 object obj = ResourceManager.GetObject("chạy xe", resourceCulture);
@@ -356,6 +416,16 @@ namespace TestQuizz.Properties {
         internal static System.Drawing.Bitmap ditimkhobau {
             get {
                 object obj = ResourceManager.GetObject("ditimkhobau", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap đổi_mật_khẩu_thành_công {
+            get {
+                object obj = ResourceManager.GetObject("đổi mật khẩu thành công", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -493,9 +563,39 @@ namespace TestQuizz.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap khunggt {
+            get {
+                object obj = ResourceManager.GetObject("khunggt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LabelTenGV {
             get {
                 object obj = ResourceManager.GetObject("LabelTenGV", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LamBaiKiemtra {
+            get {
+                object obj = ResourceManager.GetObject("LamBaiKiemtra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LoadCapTuTuongUng {
+            get {
+                object obj = ResourceManager.GetObject("LoadCapTuTuongUng", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -546,6 +646,26 @@ namespace TestQuizz.Properties {
         internal static System.Drawing.Bitmap NenLoGin {
             get {
                 object obj = ResourceManager.GetObject("NenLoGin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PanelGT {
+            get {
+                object obj = ResourceManager.GetObject("PanelGT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PanelGT_jpg {
+            get {
+                object obj = ResourceManager.GetObject("PanelGT.jpg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -703,6 +823,16 @@ namespace TestQuizz.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap quizz {
+            get {
+                object obj = ResourceManager.GetObject("quizz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap raising_hands_thumbs_up {
             get {
                 object obj = ResourceManager.GetObject("raising-hands-thumbs-up", resourceCulture);
@@ -786,6 +916,16 @@ namespace TestQuizz.Properties {
         internal static System.Drawing.Bitmap x_no {
             get {
                 object obj = ResourceManager.GetObject("x-no", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z5418767400682_08c4373207d871aeacdaadbd0b97428e1 {
+            get {
+                object obj = ResourceManager.GetObject("z5418767400682_08c4373207d871aeacdaadbd0b97428e1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

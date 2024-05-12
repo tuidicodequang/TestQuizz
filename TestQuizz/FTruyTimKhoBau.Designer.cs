@@ -35,6 +35,8 @@
             this.labelName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panelGT = new System.Windows.Forms.Panel();
+            this.bttOK = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -54,8 +56,10 @@
             this.labelDiemTong = new System.Windows.Forms.Label();
             this.labelTimeHT = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panelGT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDungSai)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -106,6 +110,7 @@
             // 
             this.panel2.BackgroundImage = global::TestQuizz.Properties.Resources.Screenshot_2024_04_10_145814;
             resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Controls.Add(this.panelGT);
             this.panel2.Controls.Add(this.button10);
             this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.button8);
@@ -117,6 +122,24 @@
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Name = "panel2";
+            // 
+            // panelGT
+            // 
+            this.panelGT.BackColor = System.Drawing.Color.Transparent;
+            this.panelGT.BackgroundImage = global::TestQuizz.Properties.Resources.PanelGT_jpg;
+            resources.ApplyResources(this.panelGT, "panelGT");
+            this.panelGT.Controls.Add(this.bttOK);
+            this.panelGT.Controls.Add(this.richTextBox1);
+            this.panelGT.Name = "panelGT";
+            // 
+            // bttOK
+            // 
+            this.bttOK.BackgroundImage = global::TestQuizz.Properties.Resources.z5418767400682_08c4373207d871aeacdaadbd0b97428e1;
+            resources.ApplyResources(this.bttOK, "bttOK");
+            this.bttOK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.bttOK.Name = "bttOK";
+            this.bttOK.UseVisualStyleBackColor = true;
+            this.bttOK.Click += new System.EventHandler(this.bttOK_Click);
             // 
             // button10
             // 
@@ -311,6 +334,14 @@
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(164)))), ((int)(((byte)(92)))));
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.richTextBox1, "richTextBox1");
+            this.richTextBox1.ForeColor = System.Drawing.SystemColors.Info;
+            this.richTextBox1.Name = "richTextBox1";
+            // 
             // FTruyTimKhoBau
             // 
             resources.ApplyResources(this, "$this");
@@ -332,6 +363,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panelGT.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDungSai)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -365,5 +397,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label labelDiemTong;
         private System.Windows.Forms.Label labelTimeHT;
+        private System.Windows.Forms.Panel panelGT;
+        private System.Windows.Forms.Button bttOK;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

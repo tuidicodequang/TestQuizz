@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Hãy cùng thử kiểm tra xem trí nhớ, độ nhạy bén và chính xác của bạn thật sự giỏi đến đâu nhé. Hãy chọn một ô câu hỏi sau đó là một ô là câu trả lời tương úng, lưu ý không chọn 2 câu trả lời ví dụ: 2 và 2. Với mỗi cặp câu hỏi đáp án chính xác bạn sẽ được cộng 10 điểm và nếu sai thì trừ đi 5 điểm. Hãy cố gắng trả lời đúng tất cả để khám phá điều bí mật phía sau nhé.</value>
+  </data>
 </root>

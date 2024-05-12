@@ -13,6 +13,8 @@ namespace TestQuizz
 {
     public partial class Fhocsinh : Form
     {
+       
+        DBUtils db = new DBUtils();
         public HocSinh hocsinh { get; set; }
         public Fhocsinh()
         {
@@ -39,7 +41,9 @@ namespace TestQuizz
                 string buttonText = clickedButton.Text;
                 // Hiển thị form và truyền vào văn bản của nút
               baikiemtraHS f=new baikiemtraHS(buttonText,hocsinh);
+                  this.Hide();
                 f.ShowDialog();
+                this.Close();
             }
         }
 
@@ -61,6 +65,26 @@ namespace TestQuizz
         private void bttchangePass_MouseLeave(object sender, EventArgs e)
         {
             bttchangePass.ForeColor = Color.SlateGray;
+        }
+
+  
+
+      
+        private void bttchangePass_Click(object sender, EventArgs e)
+        {
+            FDoiMK f = new FDoiMK();
+            f.IDTK = hocsinh.IDTK;
+        
+            f.ShowDialog();
+      
+        }
+
+        private void BTlogin_Click(object sender, EventArgs e)
+        {
+            Login f = new Login();
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
         }
     }
 }

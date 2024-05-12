@@ -69,6 +69,7 @@ namespace TestQuizz
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1103, 610);
             this.panel1.TabIndex = 6;
+     
             // 
             // pictureBox3
             // 

@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Trong trò chơi này, bạn sẽ tham gia vào một cuộc chiến với các con dế phá hoại mùa màn để giành chiến thắng. Với mỗi con dế bạn hạ gục được sẽ tương ứng với 10 điểm. Hãy sẵn sàng đối mặt với thách thức và chứng tỏ khả năng của mình để giúp các bác nông dân có một mùa màng bội thu nhé nhé!</value>
+  </data>
 </root>

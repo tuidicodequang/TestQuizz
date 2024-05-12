@@ -32,6 +32,7 @@ namespace doan
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FChonCapTuongUng));
             this.lbSai = new System.Windows.Forms.Label();
             this.lbDung = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,9 +62,13 @@ namespace doan
             this.labelTimeHT = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panelGT = new System.Windows.Forms.Panel();
+            this.bttOK = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panelGT.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbSai
@@ -417,6 +422,44 @@ namespace doan
             this.panel3.Size = new System.Drawing.Size(429, 315);
             this.panel3.TabIndex = 17;
             // 
+            // panelGT
+            // 
+            this.panelGT.BackColor = System.Drawing.Color.Transparent;
+            this.panelGT.BackgroundImage = global::TestQuizz.Properties.Resources.khunggt;
+            this.panelGT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelGT.Controls.Add(this.bttOK);
+            this.panelGT.Controls.Add(this.richTextBox1);
+            this.panelGT.Location = new System.Drawing.Point(66, 18);
+            this.panelGT.Name = "panelGT";
+            this.panelGT.Size = new System.Drawing.Size(1419, 702);
+            this.panelGT.TabIndex = 18;
+            // 
+            // bttOK
+            // 
+            this.bttOK.BackgroundImage = global::TestQuizz.Properties.Resources.z5418767400682_08c4373207d871aeacdaadbd0b97428e1;
+            this.bttOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bttOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttOK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.bttOK.Location = new System.Drawing.Point(551, 597);
+            this.bttOK.Name = "bttOK";
+            this.bttOK.Size = new System.Drawing.Size(290, 81);
+            this.bttOK.TabIndex = 2;
+            this.bttOK.Text = "OK! Chiến thôi";
+            this.bttOK.UseVisualStyleBackColor = true;
+            this.bttOK.Click += new System.EventHandler(this.bttOK_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(55)))));
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.richTextBox1.ForeColor = System.Drawing.SystemColors.Info;
+            this.richTextBox1.Location = new System.Drawing.Point(213, 88);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(1041, 479);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
             // FChonCapTuongUng
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -424,6 +467,7 @@ namespace doan
             this.BackgroundImage = global::TestQuizz.Properties.Resources.backgroundlatThe;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1551, 738);
+            this.Controls.Add(this.panelGT);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
@@ -438,6 +482,7 @@ namespace doan
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panelGT.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -473,5 +518,8 @@ namespace doan
         private Label labelTimeHT;
         private Panel panel2;
         private Panel panel3;
+        private Panel panelGT;
+        private Button bttOK;
+        private RichTextBox richTextBox1;
     }
 }

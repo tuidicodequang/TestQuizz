@@ -51,6 +51,7 @@ namespace TestQuizz
             dgvDanhSachBaiKT.Columns["TenLop"].HeaderText = "Tên Lớp";
             dgvDanhSachBaiKT.Columns["MaBoCH"].HeaderText = "Mã bộ câu hỏi";
             dgvDanhSachBaiKT.Columns["Mon"].HeaderText = "Môn";
+
         }
 
      
