@@ -34,8 +34,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.paneltrangcon = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.bttchangePass = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.paneltrangcon.SuspendLayout();
@@ -74,7 +74,7 @@
             this.lbBoMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.lbBoMon.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbBoMon.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbBoMon.Location = new System.Drawing.Point(274, 100);
+            this.lbBoMon.Location = new System.Drawing.Point(289, 100);
             this.lbBoMon.Name = "lbBoMon";
             this.lbBoMon.Size = new System.Drawing.Size(90, 24);
             this.lbBoMon.TabIndex = 2;
@@ -88,7 +88,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(24, 15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(533, 144);
+            this.panel1.Size = new System.Drawing.Size(589, 144);
             this.panel1.TabIndex = 3;
             // 
             // pictureBox1
@@ -96,7 +96,7 @@
             this.pictureBox1.Image = global::TestQuizz.Properties.Resources.LabelTenGV;
             this.pictureBox1.Location = new System.Drawing.Point(3, 15);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(527, 126);
+            this.pictureBox1.Size = new System.Drawing.Size(576, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -115,22 +115,6 @@
             this.paneltrangcon.Size = new System.Drawing.Size(1299, 680);
             this.paneltrangcon.TabIndex = 4;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Modern No. 20", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.Location = new System.Drawing.Point(1241, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 28);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // bttchangePass
             // 
             this.bttchangePass.BackColor = System.Drawing.Color.Transparent;
@@ -148,9 +132,24 @@
             this.bttchangePass.Text = "Đổi mật khẩu";
             this.bttchangePass.UseVisualStyleBackColor = false;
             this.bttchangePass.Click += new System.EventHandler(this.bttchangePass_Click);
-        
             this.bttchangePass.MouseLeave += new System.EventHandler(this.bttchangePass_MouseLeave);
             this.bttchangePass.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bttchangePass_MouseMove);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Modern No. 20", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.Location = new System.Drawing.Point(1241, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 28);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FGiaoVien
             // 

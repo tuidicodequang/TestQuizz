@@ -10,12 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TestQuizz.Model;
 using Bunifu.UI.WinForms;
+using System.Globalization;
 
 namespace TestQuizz
 {
     public partial class FLamBaiKiemTra : Form
     {
         double diem = 0;
+        public string Mon;
         DBUtils db=new DBUtils();
         public List<CauHoi> danhSachCauhoi = new List<CauHoi>();
         public List<string> danhSachMiniGame= new List<string>();
@@ -24,6 +26,8 @@ namespace TestQuizz
         private BunifuImageButton[] buttons; // Thay đổi loại dữ liệu của buttons
         private int currentButtonIndex = 0;
 
+        int ThoiGianLamBai;
+
         BaiKiemTra baikiemtra { get;set;}
         HocSinh hocsinh { get;set;}
         BaiLam bailam { get;set;}
@@ -31,15 +35,16 @@ namespace TestQuizz
         List<ChiTietCauTraLoi> dsCauTraLoi = new List<ChiTietCauTraLoi>();
 
         string MaBL;
+        public FLamBaiKiemTra(string mon)
+        {
+            Mon = mon;
+        }
         public FLamBaiKiemTra(BaiKiemTra baikiemtra,HocSinh hocsinh)
         {
             InitializeComponent();
             this.baikiemtra = baikiemtra;
             this.hocsinh=hocsinh;
-
-
-
-
+            ThoiGianLamBai = baikiemtra.ThoiGianMax;
             MaBL = TaoMaBLRandom();
             DataTable cauhois = db.getCauHoiTrongBaiKiemTra(baikiemtra.MaBaiKT);
             for (int i = 0; i < cauhois.Rows.Count; i++)
@@ -152,13 +157,12 @@ namespace TestQuizz
             panel1.Visible=true;
             buttonLam.Visible = false;
             buttonLam.Enabled = false;
-
+            button1.Visible = false;
+            button2.Visible = false;
+            panelAnhgame.Visible = false;
             this.bailam = bailam;
             lbDiem.Text=bailam.Diem.ToString();
             lbThoiGian.Text=bailam.Thoigian.ToString();
-
-            
-
         }
 
 
@@ -203,7 +207,7 @@ namespace TestQuizz
                                 {
                                     dsCauTraLoi.Add(cautraloi);
                                 }
-                                baikiemtra.ThoiGianMax -= f.f1.remainingSeconds;
+                                baikiemtra.ThoiGianMax = f.f1.remainingSeconds;
 
                                 break;
                             case "game2":
@@ -212,7 +216,7 @@ namespace TestQuizz
                                 {
                                     dsCauTraLoi.Add(cautraloi);
                                 }
-                                baikiemtra.ThoiGianMax -= f.f2.remainingSeconds;
+                                baikiemtra.ThoiGianMax = f.f2.remainingSeconds;
 
                                 break;
                             case "game3":
@@ -221,7 +225,7 @@ namespace TestQuizz
                                 {
                                     dsCauTraLoi.Add(cautraloi);
                                 }
-                                baikiemtra.ThoiGianMax -= f.f3.remainingSeconds;
+                                baikiemtra.ThoiGianMax= f.f3.remainingSeconds;
                                 break;
                             case "game4":
                                 diem += f.f4.Diem;
@@ -229,7 +233,7 @@ namespace TestQuizz
                                 {
                                     dsCauTraLoi.Add(cautraloi);
                                 }
-                                baikiemtra.ThoiGianMax -= f.f4.remainingSeconds;
+                                baikiemtra.ThoiGianMax = f.f4.remainingSeconds;
 
 
                                 break;
@@ -240,7 +244,7 @@ namespace TestQuizz
                                 {
                                     dsCauTraLoi.Add(cautraloi);
                                 }
-                                baikiemtra.ThoiGianMax -= f.f5.remainingSeconds;
+                                baikiemtra.ThoiGianMax = f.f5.remainingSeconds;
                                 break;
 
                         }
@@ -301,13 +305,14 @@ namespace TestQuizz
         private void buttonLam_Click(object sender, EventArgs e)
         {
             buttonLamAction_Click(sender, e);
+          
             diem = (diem * 1.0) / (danhSachMiniGame.Count * 1.0);
             bailam = new BaiLam();
             try
             {
                 bailam.MaBL = MaBL;
                 bailam.Diem = diem;
-                bailam.Thoigian = baikiemtra.ThoiGianMax;
+                bailam.Thoigian = ThoiGianLamBai-baikiemtra.ThoiGianMax;
                 bailam.MaBaiKT = baikiemtra.MaBaiKT;
                 bailam.MaHS = hocsinh.MaHS;
 
@@ -317,13 +322,16 @@ namespace TestQuizz
                 foreach (var cautraloi in dsCauTraLoi)
                 {
                     db.InsertChiTietBaiLam(MaBL, cautraloi.CauHoi, cautraloi.CauTraLoi, cautraloi.TrangThai);
+
                 }
 
 
 
                 buttonLam.Visible = false;
+                button1.Visible = false;
+                button2.Visible = false;
                 buttonLam.Enabled = false;
-                panel3.Visible = false;
+                panelAnhgame.Visible = false;
                 panel1.Visible = true;
 
                 lbThoiGian.Text = bailam.Thoigian.ToString();
@@ -337,5 +345,7 @@ namespace TestQuizz
                 MessageBox.Show("Lỗi khi chèn dữ liệu: " + ex.Message);
             }
         }
+
+        
     }
 }

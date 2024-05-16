@@ -13,57 +13,154 @@ namespace TestQuizz
 {
     public partial class FShowDanhSachCauHoi : Form
     {
+        public string lop {  get; set; }
+        public string mon {  get; set; }
         DBUtils db=new DBUtils();
-        public CauHoi CauHoiDuocChon { get; set; }
+        public BoCauHoi boCauHoi { get;set;}
+
+        CauHoi CauHoiDuocChon =new CauHoi();
 
 
         public FShowDanhSachCauHoi()
         {
             InitializeComponent();
-            dataGridView1.DataSource = db.getAllCauHoi();
+
+        }
+        public FShowDanhSachCauHoi(BoCauHoi boCauHoi)
+        {
+            InitializeComponent();
+            this.boCauHoi = boCauHoi;
+            LoadCauHoiTrongBoCauHoi();
+            LoadBangAllCauHoi();
+        }
+
+        public void LoadBangAllCauHoi()
+        {
+            DataTable ds = db.getAllCauHoiTheoMonvaLop(boCauHoi.Mon,boCauHoi.Lop);
+            dgvDanhSachTatCaCauHoi.DataSource=ds;
+        }
+
+        public void LoadCauHoiTrongBoCauHoi()
+        {
+            dataGridView1.DataSource = db.getCauhoiTheoBoCauHoi(boCauHoi.ID);
+        }
+
+        private void btnThemVaoBoCH_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CauHoiDuocChon.ID = txtMaCH.Text;
+                CauHoiDuocChon.NoiDung = txtDapAnDung.Text;
+                CauHoiDuocChon.DapAnDung = txtDapAnDung.Text;
+                CauHoiDuocChon.DapAn1 = txtDapAn1.Text;
+                CauHoiDuocChon.DapAn2 = txtDapAn2.Text;
+                CauHoiDuocChon.DapAn3 = txtDapAn3.Text;
+                CauHoiDuocChon.HinhAnh = "";
+                CauHoiDuocChon.Mon = txtMon.Text;
+
+                if (!db.KiemTraCauHoiDaTonTaiTrongBoCauHoi(boCauHoi.ID,CauHoiDuocChon.ID))
+                {
+                    db.InsertCauHoiVaoBoCauHoi(boCauHoi.ID, CauHoiDuocChon.ID);
+                    MessageBox.Show("Đã thêm câu hỏi vào bộ câu hỏi");
+                }  
+                else
+                {
+                    MessageBox.Show("Đã tồn tại câu hỏi trong bộ câu hỏi");
+                }    
+                
+                LoadCauHoiTrongBoCauHoi();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private string TaoMaCHRandom()
+        {
+
+            const string chars = "0123456789";
+            Random random = new Random();
+            char[] randomArray = new char[4];
+
+            for (int i = 0; i < 4; i++)
+            {
+                randomArray[i] = chars[random.Next(chars.Length)];
+            }
+            string MaBaiLam = "CH" + new string(randomArray);
+            return MaBaiLam;
+        }
+
+        private void btnThemCauHoi_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CauHoi cauhoi = new CauHoi()
+                {
+                    ID = txtMaCH.Text,
+                    NoiDung = txtNoiDung.Text,
+                    DapAnDung = txtDapAnDung.Text,
+                    DapAn1 = txtDapAn1.Text,
+                    DapAn2 = txtDapAn2.Text,
+                    DapAn3 = txtDapAn3.Text,
+                    HinhAnh = "",
+                    Mon = txtMon.Text
+
+
+                };
+                if (db.KiemTraCauHoiDaTonTai(cauhoi.ID))
+                {
+                    MessageBox.Show("Câu hỏi đã tồn tại");
+                }
+                else
+                {
+                    db.InsertCauHoiVaoThuVienCauHoi(cauhoi,lop);
+                    MessageBox.Show("Thêm câu hỏi thành công");
+                    LoadBangAllCauHoi();
+                }    
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+          this.Close();
+        }
+
+        private void dgvDanhSachTatCaCauHoi_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                // Lấy thông tin của dòng được chọn
-                DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
-                /*string maBoCH = selectedRow.Cells["ID"].Value.ToString();
-                MaCHDuocChon = maBoCH;
-                MessageBox.Show("Bạn có muốn thêm câu hỏi này vào bộ câu hỏi không");
-                this.Close();*/
-
-                string ID = selectedRow.Cells["ID"].ToString();
-                string NoiDung= selectedRow.Cells["NoiDung"].Value.ToString();
-                string DapAnDung= selectedRow.Cells["NoiDung"].Value.ToString();
-                string DapAn1= selectedRow.Cells["Dapan1"].Value.ToString();
-                string DapAn2= selectedRow.Cells["Dapan2"].Value.ToString();
-                string DapAn3 = selectedRow.Cells["Dapan3"].Value.ToString();
-                string Mon= selectedRow.Cells["Mon"].Value.ToString();
-
-                //CauHoiDuocChon=new CauHoi(ID, NoiDung,DapAnDung,DapAn1,DapAn2,DapAn3,"");
-
-
-
+                DataGridViewRow selectedRow = dgvDanhSachTatCaCauHoi.Rows[e.RowIndex];
+                txtMaCH.Text = selectedRow.Cells["ID"].Value.ToString();
                 txtNoiDung.Text = selectedRow.Cells["NoiDung"].Value.ToString();
                 txtDapAnDung.Text = selectedRow.Cells["DapAnDung"].Value.ToString();
                 txtDapAn1.Text = selectedRow.Cells["Dapan1"].Value.ToString();
                 txtDapAn2.Text = selectedRow.Cells["Dapan2"].Value.ToString();
                 txtDapAn3.Text = selectedRow.Cells["Dapan3"].Value.ToString();
-                cboMon.Text = selectedRow.Cells["Mon"].Value.ToString();
-
-
+                txtMon.Text = selectedRow.Cells["Mon"].Value.ToString();
 
 
 
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void bttThemTuFile_Click(object sender, EventArgs e)
         {
-            
+            FThemCauHoiTufile f = new FThemCauHoiTufile();
+            f.lop = lop;
+            f.mon = mon;
+            f.Owner =this;
+            f.ShowDialog();
+        }
+
+        private void txtTimKiemCauHoi_TextChanged(object sender, EventArgs e)
+        {
+            DataTable ds = db.TimKiemCauHoi(boCauHoi.Mon, boCauHoi.Lop, txtTimKiemCauHoi.Text);
+            dgvDanhSachTatCaCauHoi.DataSource = ds;
         }
     }
 }

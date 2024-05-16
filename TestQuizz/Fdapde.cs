@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TestQuizz.Model;
@@ -26,10 +27,10 @@ namespace TestQuizz
 
         CursorsCustom h = new CursorsCustom();
 
-        Timer timer = new Timer();
-        Timer timer2 = new Timer();
-        Timer timer3 = new Timer();
-        Timer timer4 = new Timer();
+        System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+        System.Windows.Forms.Timer timer2 = new System.Windows.Forms.Timer();
+        System.Windows.Forms.Timer timer3 = new System.Windows.Forms.Timer();
+        System.Windows.Forms.Timer timer4 = new System.Windows.Forms.Timer();
         int diem = 0;
         public double Diem { get { return diem; } }
 
@@ -42,23 +43,18 @@ namespace TestQuizz
         {
             InitializeComponent();
             CenterToScreen();
+            labelName.Text = hs.TenHS;
             this.danhSachCauHoi = cauhoiList;
             this.remainingSeconds = ThoiGian;
             this.hs = hs;
         }
         public void HoanThanh()
         {
-            textBox1.Visible = false;
-            panel6.Visible = false;
-            panel1.Visible = false;
-            panel2.Visible = false;
-            panel4.Visible = false;
-            panel3.Visible = false;
-            panel5.Visible = false;
-            panel7.Visible = true;
             timer2.Stop();
-            labelTimeHT.Text= TimeSpan.FromSeconds(TongThoiGian).ToString(@"mm\:ss");
-            labelDiemTong.Text = diem.ToString();
+            FShowDiem f = new FShowDiem(diem, TongThoiGian);
+            this.Hide();
+            f.ShowDialog();
+          
             this.Close();
         }
         private void CheckDapAn(System.Windows.Forms.Button bt, PictureBox thispic)
@@ -72,10 +68,12 @@ namespace TestQuizz
             {
                 thispic.Image = Properties.Resources.dungdapde;
                 diem++;
+                dscautraloi.Add(new ChiTietCauTraLoi(currentQuestion.NoiDung, dapan, 1));
                 UpdatelabelDiem();
             }
             else
             {
+                dscautraloi.Add(new ChiTietCauTraLoi(currentQuestion.NoiDung, dapan, 0));
                 thispic.Image = Properties.Resources.sairoidapde;
             }
 
@@ -104,7 +102,7 @@ namespace TestQuizz
                 button4.Text = answers[3];
                 // Cập nhật nội dung của TextBox1 là nội dung của câu hỏi hiện tại
                 textBox1.Text = currentQuestion.NoiDung;
-                label5.Text = currentIndex < 10 ? "0" + (currentIndex + 1).ToString() : (currentIndex + 1).ToString();
+                label5.Text = (currentIndex + 1).ToString();
             }
             else
             {

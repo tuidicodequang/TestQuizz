@@ -405,7 +405,7 @@ namespace doan
             this.panel2.Controls.Add(this.labelTimeHT);
             this.panel2.Location = new System.Drawing.Point(1, 112);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(512, 256);
+            this.panel2.Size = new System.Drawing.Size(1488, 723);
             this.panel2.TabIndex = 16;
             this.panel2.Visible = false;
             // 
@@ -456,6 +456,7 @@ namespace doan
             this.richTextBox1.ForeColor = System.Drawing.SystemColors.Info;
             this.richTextBox1.Location = new System.Drawing.Point(213, 88);
             this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(1041, 479);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");

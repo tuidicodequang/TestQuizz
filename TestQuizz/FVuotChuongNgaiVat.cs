@@ -54,18 +54,18 @@ namespace TestQuizz
 
         public void HoanThanh()
         {
-            panel1.Visible = false;
-            panel2.Visible = false;
-            
+          
                 timer2.Stop();
                 panel3.BringToFront();
                 labeltimeHT.Text = TimeSpan.FromSeconds(TongThoiGian).ToString(@"mm\:ss");
                 labelDiemTong.Text = diem.ToString();
                  axWindowsMediaPlayer2.Ctlcontrols.stop();
                 axWindowsMediaPlayer2.Visible = false;
-            this.Close();
             
-
+            FShowDiem f = new FShowDiem(diem, TongThoiGian);
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
         }
         private void CheckDapAn(string bt)
         {
@@ -75,6 +75,7 @@ namespace TestQuizz
             if (bt == dapan)
             {
                 diem++;
+                dscautraloi.Add(new ChiTietCauTraLoi(currentQuestion.NoiDung, dapan, 1));
                 labelDiem.Text = diem.ToString();
                 pictureBoxDungSai.Image = Properties.Resources.raising_hands_thumbs_up; // Hiển thị ảnh 2 nếu đáp án sai
                 pictureBoxDungSai.Visible = true;
@@ -82,7 +83,7 @@ namespace TestQuizz
 
             else
             {
-
+                dscautraloi.Add(new ChiTietCauTraLoi(currentQuestion.NoiDung, dapan, 0));
                 pictureBoxDungSai.Image = Properties.Resources.x_no; // Hiển thị ảnh 1 nếu đáp án đúng
                 pictureBoxDungSai.Visible = true;
             }
@@ -116,7 +117,7 @@ namespace TestQuizz
                 textBoxCauHoi.SelectionAlignment = HorizontalAlignment.Center;
                 panel1.BringToFront();
                 panel2.BringToFront();
-                labelSoCau.Text = currentIndex < 10 ? "0" + (currentIndex + 1).ToString() +"/ 10" : (currentIndex + 1).ToString()+"/ 10";
+                labelSoCau.Text = (currentIndex + 1).ToString()+"/ 10";
                 currentTimePointIndex++;
 
             }

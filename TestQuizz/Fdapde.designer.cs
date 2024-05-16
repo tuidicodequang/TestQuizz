@@ -41,8 +41,6 @@
             this.labelName = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.Button();
-            this.labelDiemTong = new System.Windows.Forms.Label();
-            this.labelTimeHT = new System.Windows.Forms.Label();
             this.pictureBBut1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureDenhay1 = new System.Windows.Forms.PictureBox();
@@ -56,8 +54,6 @@
             this.pictureBBut4 = new System.Windows.Forms.PictureBox();
             this.pictureDenhay4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelGT = new System.Windows.Forms.Panel();
             this.bttOK = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -76,8 +72,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBBut4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureDenhay4)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelGT.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -262,32 +256,6 @@
             this.textBox1.Text = "1+1";
             this.textBox1.UseVisualStyleBackColor = false;
             // 
-            // labelDiemTong
-            // 
-            this.labelDiemTong.AutoSize = true;
-            this.labelDiemTong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(190)))), ((int)(((byte)(148)))));
-            this.labelDiemTong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelDiemTong.Font = new System.Drawing.Font("Arial", 55.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelDiemTong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelDiemTong.Location = new System.Drawing.Point(794, 241);
-            this.labelDiemTong.Name = "labelDiemTong";
-            this.labelDiemTong.Size = new System.Drawing.Size(96, 107);
-            this.labelDiemTong.TabIndex = 13;
-            this.labelDiemTong.Text = "0";
-            // 
-            // labelTimeHT
-            // 
-            this.labelTimeHT.AutoSize = true;
-            this.labelTimeHT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(190)))), ((int)(((byte)(148)))));
-            this.labelTimeHT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelTimeHT.Font = new System.Drawing.Font("Arial", 40.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelTimeHT.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelTimeHT.Location = new System.Drawing.Point(747, 439);
-            this.labelTimeHT.Name = "labelTimeHT";
-            this.labelTimeHT.Size = new System.Drawing.Size(204, 78);
-            this.labelTimeHT.TabIndex = 14;
-            this.labelTimeHT.Text = "00:00";
-            // 
             // pictureBBut1
             // 
             this.pictureBBut1.BackColor = System.Drawing.Color.Transparent;
@@ -433,30 +401,6 @@
             this.panel2.TabIndex = 20;
             this.panel2.Visible = false;
             // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.Controls.Add(this.labelDiemTong);
-            this.panel7.Controls.Add(this.labelTimeHT);
-            this.panel7.Controls.Add(this.pictureBox1);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1569, 785);
-            this.panel7.TabIndex = 21;
-            this.panel7.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::TestQuizz.Properties.Resources.bangdiemgamede;
-            this.pictureBox1.Location = new System.Drawing.Point(469, 44);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(747, 603);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panelGT
             // 
             this.panelGT.BackColor = System.Drawing.Color.Transparent;
@@ -503,7 +447,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1569, 785);
             this.Controls.Add(this.panelGT);
-            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -532,9 +475,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBBut4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureDenhay4)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelGT.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -553,8 +493,6 @@
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button textBox1;
-        private System.Windows.Forms.Label labelDiemTong;
-        private System.Windows.Forms.Label labelTimeHT;
         private System.Windows.Forms.PictureBox pictureBBut1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
@@ -568,8 +506,6 @@
         private System.Windows.Forms.PictureBox pictureDenhay3;
         private System.Windows.Forms.PictureBox pictureDenhay4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelGT;
         private System.Windows.Forms.Button bttOK;
         private System.Windows.Forms.RichTextBox richTextBox1;

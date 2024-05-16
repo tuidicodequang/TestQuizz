@@ -15,7 +15,7 @@ namespace TestQuizz
 {
     public partial class FLoading : Form
     {
-        public int remainingSeconds { get; set; }
+       // public int remainingSeconds { get; set; }
         public List<CauHoi> danhSachCauHoi { get; set; }
         public FVuotChuongNgaiVat f1 { get; set; }
         public FBatBong f2 { get; set; }

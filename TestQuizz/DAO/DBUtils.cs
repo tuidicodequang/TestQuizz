@@ -8,6 +8,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using TestQuizz.Model;
+using System.Globalization;
 
 namespace TestQuizz
 {
@@ -18,6 +19,76 @@ namespace TestQuizz
         {
             db = new Database();
         }
+        public DataTable TimkiemBoCauHoiTheoMon(string mon, string abc)
+        {
+            string strSQL = " select * from BoCauHoi where concat(ID, TenBo) like '%" + abc + "%' and Mon='" + mon + "'";
+            DataTable dt = db.Excute(strSQL);
+            return dt;
+        }
+        public DataTable TimKiemCauHoi(string mon, string lop, string text)
+        {
+            string strSQL = "SELECT * FROM CauHoi  WHERE Mon = '" + mon + "' AND Lop = '" + lop + "' and concat(ID, NoiDung) like '%" + text + "%'";
+            DataTable dt = db.Excute(strSQL);
+            return dt;
+
+        }
+        public DataTable getBaiLamHSTheoBaiKiemTra(HocSinh hs, BaiKiemTra baikiemtra)
+        {
+            string strSQL = "select * from BaiLam where MaHS='" + hs.MaHS + "' and MaBaiKT='" + baikiemtra.MaBaiKT + "'";
+            DataTable dt = db.Excute(strSQL);
+            return dt;
+        }
+        public DataTable getDanhSachBaiLamHSTheoBaiKiemTra(BaiKiemTra baikiemtra)
+        {
+            string strSQL = "select BaiLam.MaBL ,HocSinh.TenHS,BaiLam.Diem,ThoiGian from BaiLam,HocSinh where BaiLam.MaHS=HocSinh.MaHS and MaBaiKT='" + baikiemtra.MaBaiKT + "'";
+            DataTable dt = db.Excute(strSQL);
+            return dt;
+        }
+        public DataTable getAllCauHoiTheoMonvaLop(string mon, string lop)
+        {
+            string strSQL = "SELECT * FROM CauHoi WHERE Mon = N'" + mon + "' AND Lop = '" + lop + "'";
+            DataTable dt = db.Excute(strSQL);
+            return dt;
+        }
+
+        public bool KiemTraCauHoiDaTonTai(string idCH)
+        {
+            string strSQL = "SELECT COUNT(*) FROM CauHoi WHERE ID = '" + idCH + "';";
+            int count = db.ExecuteScalar(strSQL);
+            return count > 0;
+        }
+      
+
+        public bool KiemTraCauHoiDaTonTaiTrongBoCauHoi(string idBoCH, string idCH)
+        {
+            string strSQL = "SELECT COUNT(*) FROM QLCauHoi WHERE MaBoCH = '" + idBoCH + "'and MaCH='" + idCH + "';";
+            int count = db.ExecuteScalar(strSQL);
+            return count > 0;
+        }
+        public DataTable getAllBoCauHoiTheoMonVaLop(string mon, string lop)
+        {
+           
+            string strSQL = "select * from BoCauHoi where Mon =N'"+ mon +"'and Lop= '" + lop + "'";
+            DataTable dt = db.Excute(strSQL);
+            return dt;
+        }
+        public void InsertBaiKiemTra(BaiKiemTra baiKiemTra)
+        {
+            string thoiGianBatDauFormatted = baiKiemTra.ThoiGianBatDau.ToString("yyyy-MM-dd HH:mm:ss");
+            string thoiGianKetThucFormatted = baiKiemTra.ThoiGianKetThuc.ToString("yyyy-MM-dd HH:mm:ss");
+
+            string strSQL = "INSERT INTO BaiKiemTra (MaBaiKT, TenBaiKT, ThoiGianBatDau, ThoiGianKetThuc, ThoiGianMax, TenLop, MaBoCH, Mon) " +
+                            "VALUES ('" + baiKiemTra.MaBaiKT + "', N'" + baiKiemTra.TenBaiKT + "', '" + thoiGianBatDauFormatted + "', '" + thoiGianKetThucFormatted + "', '" + baiKiemTra.ThoiGianMax + "', N'" + baiKiemTra.TenLop + "', '" + baiKiemTra.MaBoCH + "', N'" + baiKiemTra.Mon + "')";
+
+            db.ExcuteNonQuery(strSQL);
+        }
+
+        public void InsertMiniGameVaoBaiKiemTra(BaiKiemTra baiKemTra, string minigame)
+        {
+            string strSQL = "Insert into QLMiniGame values ('" + baiKemTra.MaBaiKT + "','" + minigame + "')";
+            db.ExcuteNonQuery(strSQL);
+        }
+
 
         public DataTable getAllTaiKhoan()
         {
@@ -39,9 +110,10 @@ namespace TestQuizz
             return dt;
         }
 
-        public DataTable getAllBaiKiemTraTheoLop(string tenlop)
+        public DataTable getAllBaiKiemTraTheoLop(string tenlop,string mon)
         {
-            string strSQL = "select * from BaiKiemTra where TenLop ='"+tenlop+"' ";
+            string strSQL = "SELECT * FROM BaiKiemTra WHERE TenLop = '" + tenlop + "' AND Mon = '" + mon + "'";
+
             DataTable dt = db.Excute(strSQL);
             return dt;
         }
@@ -60,9 +132,10 @@ namespace TestQuizz
             return dt;
         }
 
+
         public DataTable getAllHocSinhTheoLop(string TenLop)
         {
-            string strSQL = "select MaHS,TenHS,GioiTinh,NgaySinh from Lop,HocSinh where Lop.TenLop=HocSinh.TenLop and Lop.TenLop= '" + TenLop + "';";
+            string strSQL = "SELECT MaHS, TenHS, GioiTinh, NgaySinh FROM Lop, HocSinh WHERE Lop.TenLop = HocSinh.TenLop AND Lop.TenLop = '" + TenLop + "' ORDER BY TenHS ASC;";
             DataTable dt = db.Excute(strSQL);
             return dt;
         }
@@ -83,7 +156,7 @@ namespace TestQuizz
 
         public DataTable getCauhoiTheoBoCauHoi(string MaBoCH)
         {
-            string strSQL = "select * from CauHoi,BoCauHoi,QLCauHoi where CauHoi.ID=QLCauHoi.MaCH and BoCauHoi.ID=QLCauHoi.MaBoCH and BoCauHoi.ID='"+MaBoCH+"';";
+            string strSQL = "select CauHoi.ID,NoiDung,DapAnDung,Dapan1,Dapan2,Dapan3,HinhAnh, CauHoi.Lop,CauHoi.Mon from CauHoi,BoCauHoi,QLCauHoi where CauHoi.ID=QLCauHoi.MaCH and BoCauHoi.ID=QLCauHoi.MaBoCH and BoCauHoi.ID='" + MaBoCH + "';";
             DataTable dt = db.Excute(strSQL);
             return dt;
         }
@@ -117,7 +190,7 @@ namespace TestQuizz
 
         public void InsertBoCauHoi(BoCauHoi boCauHoi)
         {
-            string strSQL = "Insert into BoCauHoi values ('" + boCauHoi.ID + "','" + boCauHoi.TenBo + "','" + boCauHoi.Lop + "','" + boCauHoi.Mon + "')";
+            string strSQL = "Insert into BoCauHoi values ('" + boCauHoi.ID + "',N'" + boCauHoi.TenBo + "',N'" + boCauHoi.Lop + "',N'" + boCauHoi.Mon + "')";
             db.ExcuteNonQuery(strSQL);
         }
 
@@ -134,17 +207,18 @@ namespace TestQuizz
             return dt;
         }
 
-        public void InsertBaiLam(string maBaiLam,float diem,int thoigian,string maBaiKT,string maHS)
+        /*public void InsertBaiLam(string maBaiLam,double diem,int thoigian,string maBaiKT,string maHS)
         {
 
             string strSQL = "Insert into BaiLam values ('" + maBaiLam + "','" + diem + "','" + thoigian + "','" + maBaiKT + "','" + maHS + "')";
             db.ExcuteNonQuery(strSQL);
         }
+*/
 
-
-        public void InsertCauHoiVaoThuVienCauHoi(CauHoi cauHoi)
+        public void InsertCauHoiVaoThuVienCauHoi(CauHoi cauHoi,string lop)
         {
-            string strSQL = "Insert into CauHoi values ('" + cauHoi.ID + "','" + cauHoi.NoiDung + "','" + cauHoi.DapAnDung + "','" + cauHoi.DapAn1 + "','" + cauHoi.DapAn2 + "','" + cauHoi.DapAn3 + "','" + cauHoi.HinhAnh  + "','" + cauHoi.Mon + "')";
+            string strSQL = "INSERT INTO CauHoi (ID, NoiDung, DapAnDung, DapAn1, DapAn2, DapAn3, HinhAnh, Mon, Lop) VALUES ('" + cauHoi.ID + "', N'" + cauHoi.NoiDung + "', N'" + cauHoi.DapAnDung + "', N'" + cauHoi.DapAn1 + "', N'" + cauHoi.DapAn2 + "', N'" + cauHoi.DapAn3 + "', '" + cauHoi.HinhAnh + "', '" + cauHoi.Mon + "', N'" + lop + "')";
+           
             db.ExcuteNonQuery(strSQL);
         }
 
@@ -154,7 +228,7 @@ namespace TestQuizz
             string strSQL = "SELECT DISTINCT MaBaiKT, TenBaiKT, ThoiGianBatDau, ThoiGianKetThuc, ThoiGianMax, BaiKiemTra.TenLop ,MaBoCH, Mon " +
                             "FROM BaiKiemTra " +
                             "INNER JOIN HocSinh ON HocSinh.TenLop = BaiKiemTra.TenLop " +
-                            "WHERE BaiKiemTra.Mon = '" + mon + "' " +
+                            "WHERE BaiKiemTra.Mon = N'" + mon + "' " +
                             "AND BaiKiemTra.MaBaiKT NOT IN (" +
                             "    SELECT DISTINCT MaBaiKT " +
                             "    FROM BaiLam " +
@@ -167,7 +241,7 @@ namespace TestQuizz
             string strSQL = "SELECT DISTINCT BaiKiemTra.MaBaiKT, BaiKiemTra.TenBaiKT, BaiKiemTra.ThoiGianBatDau, BaiKiemTra.ThoiGianKetThuc, BaiKiemTra.ThoiGianMax, BaiKiemTra.TenLop, BaiKiemTra.MaBoCH, BaiKiemTra.Mon " +
                             "FROM BaiKiemTra " +
                             "INNER JOIN HocSinh ON HocSinh.TenLop = BaiKiemTra.TenLop " +
-                            "WHERE BaiKiemTra.Mon = '" + mon + "' " +
+                            "WHERE BaiKiemTra.Mon = N'" + mon + "' " +
                             "AND BaiKiemTra.MaBaiKT IN (" +
                             "    SELECT DISTINCT MaBaiKT " +
                             "    FROM BaiLam " +
@@ -212,7 +286,7 @@ namespace TestQuizz
 
         public void InsertChiTietBaiLam(string maBL, string cauhoi, string cautraloi, int trangthai)
         {
-            string strSQL = "Insert into ChiTietBaiLam values ('" + maBL + "','" + cauhoi + "','" + cautraloi + "','" + trangthai + "')";
+            string strSQL = "Insert into ChiTietBaiLam values ('" + maBL + "',N'" + cauhoi + "',N'" + cautraloi + "','" + trangthai + "')";
             db.ExcuteNonQuery(strSQL);
         }
 
@@ -224,8 +298,9 @@ namespace TestQuizz
         }
         public void InsertBaiLam(BaiLam bailam)
         {
-
-            string strSQL = "Insert into BaiLam values ('" + bailam.MaBL + "','" + bailam.Diem + "','" + bailam.Thoigian + "','" + bailam.MaBaiKT + "','" + bailam.MaHS + "')";
+            CultureInfo culture = new CultureInfo("en-US");
+            string diemAsString = bailam.Diem.ToString(culture);
+            string strSQL = "Insert into BaiLam values ('" + bailam.MaBL + "','" + float.Parse(diemAsString) + "','" + bailam.Thoigian + "','" + bailam.MaBaiKT + "','" + bailam.MaHS + "')";
             db.ExcuteNonQuery(strSQL);
         }
         public DataTable TimKiemBaiDaLam(string tenBaiLam, DateTime ngayThang, HocSinh hs, string mon)
@@ -250,7 +325,7 @@ namespace TestQuizz
         }
         public DataTable TimKiemBaiChuaLam(string tenBaiLam, DateTime ngayThang, HocSinh hs, string mon)
         {
-            // Chuyển ngày tháng thành chuỗi đúng định dạng SQL (YYYY-MM-DD)
+          
 
             // Tạo câu truy vấn SQL
             string strSQL = "SELECT DISTINCT MaBaiKT, TenBaiKT, ThoiGianBatDau, ThoiGianKetThuc, ThoiGianMax, BaiKiemTra.TenLop, MaBoCH, Mon " +
@@ -263,8 +338,6 @@ namespace TestQuizz
                             "   FROM BaiLam " +
                             "   WHERE MaHS = '" + hs.MaHS + "')" +
                             "AND '" + ngayThang.ToString("yyyy-MM-dd") + "' BETWEEN ThoiGianBatDau AND ThoiGianKetThuc";
-
-            // Thực hiện truy vấn và lấy dữ liệu
             DataTable dt = db.Excute(strSQL);
             return dt;
         }

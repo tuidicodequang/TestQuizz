@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 using TestQuizz.Model;
 
@@ -13,21 +14,22 @@ namespace TestQuizz
 {
     public partial class baikiemtraHS : Form
     {
+    
         DBUtils db = new DBUtils();
         public HocSinh hocsinh { get; set; }
         public string mon { get; set; }
+       
         public baikiemtraHS(string mon, HocSinh hs)
         {
             InitializeComponent();
             this.hocsinh = hs;
             this.mon = mon;
             LoadBangBaiKiemTraHSChuaLam(mon, hocsinh);
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
+            
 
         }
+
+
         public void LoadBangBaiKiemTraHSChuaLam(string mon, HocSinh hocsinh)
         {
             tableLayoutPanel1.Controls.Clear();
@@ -49,10 +51,6 @@ namespace TestQuizz
 
         }
 
-        private void baikiemtraHS_Load(object sender, EventArgs e)
-        {
-
-        }
         public void LoadBangBaiKiemTraHSDaLam(string mon, HocSinh hocsinh)
         {
             tableLayoutPanel1.Controls.Clear();

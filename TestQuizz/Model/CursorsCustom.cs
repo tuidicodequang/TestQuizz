@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,14 +13,15 @@ namespace TestQuizz
     internal class CursorsCustom
     {
 
-        public string ball = "C:\\Users\\manno\\OneDrive\\Desktop\\hoc c#\\TestQuizz\\TestQuizz\\Resources\\CursorsBall.png";
-        public string bua = "C:\\Users\\manno\\OneDrive\\Desktop\\hoc c#\\TestQuizz\\TestQuizz\\Resources\\caybua.png";
+        public string ball = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "TestQuizz", "Resources", "CursorsBall.png");
+       
+        public string bua = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "TestQuizz", "Resources", "caybua.png");
 
 
-    public void ChangeCursors(string path)
+        public void ChangeCursors(string path)
         {
             Bitmap cursorBitmap = new Bitmap(new Bitmap(path), 50, 50);
-            if (path == "C:\\Users\\manno\\OneDrive\\Desktop\\hoc c#\\TestQuizz\\TestQuizz\\Resources\\caybua.png")
+            if (path == bua)
             {
                  cursorBitmap = new Bitmap(new Bitmap(path), 250, 250);
             }

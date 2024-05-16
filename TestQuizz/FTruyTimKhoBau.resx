@@ -190,7 +190,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="labeltime.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -324,6 +324,9 @@
   <data name="bttOK.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 16.2pt, style=Bold</value>
   </data>
+  <data name="bttOK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="bttOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>757, 600</value>
   </data>
@@ -379,7 +382,7 @@
     <value>-66, -5</value>
   </data>
   <data name="panelGT.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1676, 787</value>
+    <value>1620, 787</value>
   </data>
   <data name="panelGT.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -688,7 +691,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="pictureBoxDungSai.Location" type="System.Drawing.Point, System.Drawing">
     <value>431, 509</value>
@@ -712,7 +715,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBoxDungSai.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="TextBox1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 19.8pt, style=Bold</value>
@@ -742,7 +745,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TextBox1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="buttonDA1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -772,7 +775,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonDA1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="buttonDA2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -802,7 +805,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonDA2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="buttonDA4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -832,7 +835,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonDA4.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="buttonDA3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -862,91 +865,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonDA3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="labelDiemTong.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelDiemTong.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 55.2pt, style=Bold</value>
-  </data>
-  <data name="labelDiemTong.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 6</value>
-  </data>
-  <data name="labelDiemTong.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 107</value>
-  </data>
-  <data name="labelDiemTong.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="labelDiemTong.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelDiemTong.Name" xml:space="preserve">
-    <value>labelDiemTong</value>
-  </data>
-  <data name="&gt;&gt;labelDiemTong.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelDiemTong.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;labelDiemTong.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="labelTimeHT.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelTimeHT.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 40.2pt, style=Bold</value>
-  </data>
-  <data name="labelTimeHT.Location" type="System.Drawing.Point, System.Drawing">
-    <value>117, 227</value>
-  </data>
-  <data name="labelTimeHT.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 78</value>
-  </data>
-  <data name="labelTimeHT.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="labelTimeHT.Text" xml:space="preserve">
-    <value>00:00</value>
-  </data>
-  <data name="&gt;&gt;labelTimeHT.Name" xml:space="preserve">
-    <value>labelTimeHT</value>
-  </data>
-  <data name="&gt;&gt;labelTimeHT.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelTimeHT.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;labelTimeHT.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 264</value>
-  </data>
-  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>425, 336</value>
-  </data>
-  <data name="panel3.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="panel3.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

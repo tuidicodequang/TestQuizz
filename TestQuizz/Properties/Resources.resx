@@ -121,9 +121,6 @@
   <data name="icons8-teaching-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-teaching-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Picture7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Picture7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="bangdiemgamede" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bangdiemgamede.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,6 +139,9 @@
   <data name="chạy xe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chạy xe.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="TileTrangChu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TileTrangChu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BttBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BttBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -153,6 +153,9 @@
   </data>
   <data name="condenhaymua" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\condenhaymua.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="vuotchuongngaivat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vuotchuongngaivat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,11 +235,14 @@
   <data name="dungdapde" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dungdapde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backgroundwin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backgroundwin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backgroundwinDapDe1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundwinDapDe1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bangdiemduaxe1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bangdiemduaxe1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backgroundwinBatBong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundwinBatBong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="backgroudaicapload" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backgroudaicapload.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,8 +256,14 @@
   <data name="Picture10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Picture10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="backgroundwinDapDe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundwinDapDe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="akv" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\akv1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="titlenen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\titlenen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BackGroundLop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BackGroundLop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -280,6 +292,9 @@
   <data name="x-no" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\x-no.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LabelTenGV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LabelTenGV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="NenLoGin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NenLoGin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -303,6 +318,9 @@
   </data>
   <data name="Picture5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Picture5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backgroundwin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundwin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PanelGT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PanelGT.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -328,8 +346,8 @@
   <data name="PanelGT.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PanelGT.jpg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LabelTenGV" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LabelTenGV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BackgroundHoanThanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BackgroundHoanThanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="khunggt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\khunggt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -343,6 +361,9 @@
   <data name="Khoa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Khoa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BackgroundHoanThanh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BackgroundHoanThanh1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="turn-back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\turn-back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -355,11 +376,17 @@
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BttStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BttStart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="backgroundwinchontuongung" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backgroundwinchontuongung.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bangdiemdabanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bangdiemdabanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-book-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-book-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loadingVCNV" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loadingVCNV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -373,10 +400,10 @@
   <data name="Picture62" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Picture62.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-book-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-book-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Picture7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Picture7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BttStart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BttStart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AnhTrangChu\1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

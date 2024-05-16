@@ -45,22 +45,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.Button();
-            this.textBoxn = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.labelDiemTong = new System.Windows.Forms.Label();
-            this.labelTimeHT = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panelGT = new System.Windows.Forms.Panel();
             this.bttOK = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.textBoxn = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel3.SuspendLayout();
             this.panelGT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
@@ -263,7 +257,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 33);
             this.label6.TabIndex = 13;
-            this.label6.Text = "01";
+            this.label6.Text = "10";
             // 
             // label5
             // 
@@ -273,9 +267,9 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label5.Location = new System.Drawing.Point(103, 77);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 33);
+            this.label5.Size = new System.Drawing.Size(31, 33);
             this.label5.TabIndex = 12;
-            this.label5.Text = "01";
+            this.label5.Text = "1";
             // 
             // textBox1
             // 
@@ -294,65 +288,6 @@
             this.textBox1.TabIndex = 12;
             this.textBox1.Text = "1+1";
             this.textBox1.UseVisualStyleBackColor = false;
-            // 
-            // textBoxn
-            // 
-            this.textBoxn.Enabled = false;
-            this.textBoxn.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxn.Location = new System.Drawing.Point(249, 281);
-            this.textBoxn.Name = "textBoxn";
-            this.textBoxn.Size = new System.Drawing.Size(839, 42);
-            this.textBoxn.TabIndex = 7;
-            this.textBoxn.Text = "1+2=?";
-            this.textBoxn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::TestQuizz.Properties.Resources.Bangdiem1;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(897, 406);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
-            // 
-            // labelDiemTong
-            // 
-            this.labelDiemTong.AutoSize = true;
-            this.labelDiemTong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(143)))), ((int)(((byte)(165)))));
-            this.labelDiemTong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelDiemTong.Font = new System.Drawing.Font("Arial", 55.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelDiemTong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelDiemTong.Location = new System.Drawing.Point(421, 112);
-            this.labelDiemTong.Name = "labelDiemTong";
-            this.labelDiemTong.Size = new System.Drawing.Size(96, 107);
-            this.labelDiemTong.TabIndex = 13;
-            this.labelDiemTong.Text = "0";
-            // 
-            // labelTimeHT
-            // 
-            this.labelTimeHT.AutoSize = true;
-            this.labelTimeHT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(143)))), ((int)(((byte)(165)))));
-            this.labelTimeHT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelTimeHT.Font = new System.Drawing.Font("Arial", 40.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelTimeHT.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelTimeHT.Location = new System.Drawing.Point(365, 294);
-            this.labelTimeHT.Name = "labelTimeHT";
-            this.labelTimeHT.Size = new System.Drawing.Size(204, 78);
-            this.labelTimeHT.TabIndex = 14;
-            this.labelTimeHT.Text = "00:00";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.labelDiemTong);
-            this.panel3.Controls.Add(this.labelTimeHT);
-            this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Location = new System.Drawing.Point(370, 114);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(898, 410);
-            this.panel3.TabIndex = 15;
             // 
             // panelGT
             // 
@@ -403,6 +338,17 @@
             this.axWindowsMediaPlayer1.TabIndex = 0;
             this.axWindowsMediaPlayer1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(this.axWindowsMediaPlayer1_PlayStateChange);
             // 
+            // textBoxn
+            // 
+            this.textBoxn.Enabled = false;
+            this.textBoxn.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBoxn.Location = new System.Drawing.Point(249, 281);
+            this.textBoxn.Name = "textBoxn";
+            this.textBoxn.Size = new System.Drawing.Size(839, 42);
+            this.textBoxn.TabIndex = 7;
+            this.textBoxn.Text = "1+2=?";
+            this.textBoxn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FBatBong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -421,7 +367,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.textBoxn);
-            this.Controls.Add(this.panel3);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FBatBong";
@@ -434,9 +379,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panelGT.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
@@ -463,13 +405,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button textBox1;
-        private System.Windows.Forms.TextBox textBoxn;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label labelDiemTong;
-        private System.Windows.Forms.Label labelTimeHT;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelGT;
         private System.Windows.Forms.Button bttOK;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox textBoxn;
     }
 }

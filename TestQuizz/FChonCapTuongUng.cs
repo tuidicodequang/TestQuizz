@@ -4,6 +4,7 @@ using System.Diagnostics.SymbolStore;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using TestQuizz;
 using TestQuizz.Model;
 
 namespace doan
@@ -49,6 +50,7 @@ namespace doan
             InitializeComponent();
             this.danhSachCauHoi = cauhoiList;
             this.remainingSeconds = ThoiGian;
+            label3.Text = hs.TenHS;
             this.hs = hs;
         }
         private void Timer_Tick(object sender, EventArgs e)
@@ -68,15 +70,11 @@ namespace doan
         }
         private void HoanThanh()
         {
-            panel3.Visible = false;
-            panel1.Visible = false;
-            panel2.Visible = true;
-            this.BackgroundImage= TestQuizz.Properties.Resources.backgroundwinchontuongung;
+        
             timer.Stop();
-             labelTimeHT.Text = TimeSpan.FromSeconds(TongThoiGian).ToString(@"mm\:ss");
             UpdateDiemSo();
-           this.Close();
-        }
+            FShowDiem f = new FShowDiem(diem, TongThoiGian);
+        } 
         private void UpdateDiemSo()
         {
             int d = int.Parse(lbDung.Text);
@@ -257,6 +255,7 @@ namespace doan
                                         button.Visible = false;
                                     }
                                 }
+                                dscautraloi.Add(new ChiTietCauTraLoi(clickedButtons[0].Text.ToString(), clickedButtons[1].Text.ToString(), 1)); 
                                 Array.Clear(clickedButtons, 0, clickedButtons.Length);
                                 int d = int.Parse(lbDung.Text) + 1;
                                 lbDung.Text = d.ToString();
@@ -276,6 +275,7 @@ namespace doan
                                 }
 
                                 // Xóa tất cả các button khỏi mảng
+                                dscautraloi.Add(new ChiTietCauTraLoi(clickedButtons[0].Text.ToString(), clickedButtons[1].Text.ToString(), 0));
                                 Array.Clear(clickedButtons, 0, clickedButtons.Length);
                                 selectedButton = null;
                                 int s = int.Parse(lbSai.Text) + 1;

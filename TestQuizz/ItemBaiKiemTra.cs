@@ -13,6 +13,8 @@ namespace TestQuizz
 {
     public partial class ItemBaiKiemTra : UserControl
     {
+
+        DBUtils db = new DBUtils();
         public BaiKiemTra BaiKiemTra { get; set; }
         public HocSinh HocSinh { get; set; }
        
@@ -46,6 +48,19 @@ namespace TestQuizz
             }
         }
 
-       
+        private void btnXemChiTiet_Click(object sender, EventArgs e)
+        {
+            DataTable BL = db.getBaiLamHSTheoBaiKiemTra(HocSinh, BaiKiemTra);
+
+            BaiLam BaiLam = new BaiLam();
+            BaiLam.MaBL = BL.Rows[0]["MaBL"].ToString();
+            BaiLam.Diem = (double)BL.Rows[0]["Diem"];
+            BaiLam.Thoigian = (int)BL.Rows[0]["ThoiGian"];
+            BaiLam.MaBaiKT = BL.Rows[0]["MaBaiKT"].ToString();
+            BaiLam.MaHS = BL.Rows[0]["MaHS"].ToString();
+            FLamBaiKiemTra f = new FLamBaiKiemTra(BaiKiemTra, BaiLam, HocSinh);
+          
+            f.ShowDialog();
+        }
     }
 }

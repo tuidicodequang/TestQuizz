@@ -32,7 +32,7 @@ namespace TestQuizz
                 button.Text ="Lớp  " + lops.Rows[i]["TenLop"].ToString(); // Sử dụng chỉ mục hàng i
                 button.Width = 250;
                 button.Height = 200;
-                button.BackgroundImage = Image.FromFile("C:\\Users\\manno\\OneDrive\\Desktop\\hoc c#\\TestQuizz\\TestQuizz\\Resources\\BackGroundLop.png");
+                button.BackgroundImage = Properties.Resources.BackGroundLop;
                 button.BackgroundImageLayout = ImageLayout.Stretch;
                 button.FlatStyle = FlatStyle.Flat;
                 button.Font = new Font("Microsoft Sans Serif", 12f, FontStyle.Regular);
@@ -72,9 +72,10 @@ namespace TestQuizz
             Button button = sender as Button;
             string tenLop = button.Text;
             string[] parts = tenLop.Split(' ');
-            string lop = parts[2]; // Lấy phần tử thứ 2 sau khi tách chuỗi theo khoảng trắng
+            string lop = parts[2]; // Lấy phần tử thứ 2 sau khi tách chuỗi theo khoảng trắn
             FDanhSachHocSinh f = new FDanhSachHocSinh();
             f.tenlop = lop;
+            f.mon = giaovien.BoMon;
             OpenchildForm(f);
         }
 

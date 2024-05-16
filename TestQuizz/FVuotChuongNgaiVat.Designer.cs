@@ -301,6 +301,7 @@
             this.textBoxCauHoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBoxCauHoi.Location = new System.Drawing.Point(64, 70);
             this.textBoxCauHoi.Name = "textBoxCauHoi";
+            this.textBoxCauHoi.ReadOnly = true;
             this.textBoxCauHoi.Size = new System.Drawing.Size(646, 133);
             this.textBoxCauHoi.TabIndex = 13;
             this.textBoxCauHoi.Text = "Câu hỏi";
@@ -405,6 +406,7 @@
             this.richTextBox1.ForeColor = System.Drawing.SystemColors.Info;
             this.richTextBox1.Location = new System.Drawing.Point(213, 88);
             this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(1041, 479);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");

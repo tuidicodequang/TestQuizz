@@ -40,7 +40,7 @@ namespace TestQuizz.Model
 
         // Hàm khởi tạo với tham số
 
-        BaiKiemTra() { }
+       public BaiKiemTra() { }
 
         public string MaBaiKT { get => maBaiKT; set => maBaiKT = value; }
         public string TenBaiKT { get => tenBaiKT; set => tenBaiKT = value; }

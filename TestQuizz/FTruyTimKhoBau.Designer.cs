@@ -35,8 +35,6 @@
             this.labelName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panelGT = new System.Windows.Forms.Panel();
-            this.bttOK = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -53,15 +51,13 @@
             this.buttonDA2 = new System.Windows.Forms.Button();
             this.buttonDA4 = new System.Windows.Forms.Button();
             this.buttonDA3 = new System.Windows.Forms.Button();
-            this.labelDiemTong = new System.Windows.Forms.Label();
-            this.labelTimeHT = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.bttOK = new System.Windows.Forms.Button();
+            this.panelGT = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panelGT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDungSai)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.panelGT.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -122,24 +118,6 @@
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Name = "panel2";
-            // 
-            // panelGT
-            // 
-            this.panelGT.BackColor = System.Drawing.Color.Transparent;
-            this.panelGT.BackgroundImage = global::TestQuizz.Properties.Resources.PanelGT_jpg;
-            resources.ApplyResources(this.panelGT, "panelGT");
-            this.panelGT.Controls.Add(this.bttOK);
-            this.panelGT.Controls.Add(this.richTextBox1);
-            this.panelGT.Name = "panelGT";
-            // 
-            // bttOK
-            // 
-            this.bttOK.BackgroundImage = global::TestQuizz.Properties.Resources.z5418767400682_08c4373207d871aeacdaadbd0b97428e1;
-            resources.ApplyResources(this.bttOK, "bttOK");
-            this.bttOK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.bttOK.Name = "bttOK";
-            this.bttOK.UseVisualStyleBackColor = true;
-            this.bttOK.Click += new System.EventHandler(this.bttOK_Click);
             // 
             // button10
             // 
@@ -265,6 +243,7 @@
             resources.ApplyResources(this.TextBox1, "TextBox1");
             this.TextBox1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.TextBox1.Name = "TextBox1";
+            this.TextBox1.ReadOnly = true;
             // 
             // buttonDA1
             // 
@@ -310,30 +289,6 @@
             this.buttonDA3.UseVisualStyleBackColor = false;
             this.buttonDA3.Click += new System.EventHandler(this.buttonDA3_Click);
             // 
-            // labelDiemTong
-            // 
-            resources.ApplyResources(this.labelDiemTong, "labelDiemTong");
-            this.labelDiemTong.BackColor = System.Drawing.Color.Transparent;
-            this.labelDiemTong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelDiemTong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelDiemTong.Name = "labelDiemTong";
-            // 
-            // labelTimeHT
-            // 
-            resources.ApplyResources(this.labelTimeHT, "labelTimeHT");
-            this.labelTimeHT.BackColor = System.Drawing.Color.Transparent;
-            this.labelTimeHT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelTimeHT.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelTimeHT.Name = "labelTimeHT";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.labelTimeHT);
-            this.panel3.Controls.Add(this.labelDiemTong);
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.Name = "panel3";
-            // 
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(164)))), ((int)(((byte)(92)))));
@@ -341,13 +296,31 @@
             resources.ApplyResources(this.richTextBox1, "richTextBox1");
             this.richTextBox1.ForeColor = System.Drawing.SystemColors.Info;
             this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            // 
+            // bttOK
+            // 
+            this.bttOK.BackgroundImage = global::TestQuizz.Properties.Resources.z5418767400682_08c4373207d871aeacdaadbd0b97428e1;
+            resources.ApplyResources(this.bttOK, "bttOK");
+            this.bttOK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.bttOK.Name = "bttOK";
+            this.bttOK.UseVisualStyleBackColor = true;
+            this.bttOK.Click += new System.EventHandler(this.bttOK_Click);
+            // 
+            // panelGT
+            // 
+            this.panelGT.BackColor = System.Drawing.Color.Transparent;
+            this.panelGT.BackgroundImage = global::TestQuizz.Properties.Resources.PanelGT_jpg;
+            resources.ApplyResources(this.panelGT, "panelGT");
+            this.panelGT.Controls.Add(this.bttOK);
+            this.panelGT.Controls.Add(this.richTextBox1);
+            this.panelGT.Name = "panelGT";
             // 
             // FTruyTimKhoBau
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.buttonDA3);
             this.Controls.Add(this.buttonDA4);
@@ -363,10 +336,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panelGT.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDungSai)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panelGT.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -394,9 +365,6 @@
         private System.Windows.Forms.Button buttonDA4;
         private System.Windows.Forms.Button buttonDA3;
         public System.Windows.Forms.RichTextBox TextBox1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label labelDiemTong;
-        private System.Windows.Forms.Label labelTimeHT;
         private System.Windows.Forms.Panel panelGT;
         private System.Windows.Forms.Button bttOK;
         private System.Windows.Forms.RichTextBox richTextBox1;

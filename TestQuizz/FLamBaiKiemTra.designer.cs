@@ -58,9 +58,9 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.lbThoiGian);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(78, 305);
+            this.panel1.Location = new System.Drawing.Point(3, 227);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(912, 116);
+            this.panel1.Size = new System.Drawing.Size(906, 116);
             this.panel1.TabIndex = 2;
             this.panel1.Visible = false;
             // 
@@ -206,7 +206,7 @@
             this.panelAnhgame.BorderThickness = 1;
             this.panelAnhgame.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.panelAnhgame.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.panelAnhgame.Location = new System.Drawing.Point(3, 3);
+            this.panelAnhgame.Location = new System.Drawing.Point(78, 93);
             this.panelAnhgame.Name = "panelAnhgame";
             this.panelAnhgame.PanelColor = System.Drawing.Color.WhiteSmoke;
             this.panelAnhgame.PanelColor2 = System.Drawing.Color.WhiteSmoke;
@@ -215,7 +215,7 @@
             this.panelAnhgame.ShadowDepth = 5;
             this.panelAnhgame.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.panelAnhgame.ShadowTopLeftVisible = false;
-            this.panelAnhgame.Size = new System.Drawing.Size(906, 603);
+            this.panelAnhgame.Size = new System.Drawing.Size(906, 610);
             this.panelAnhgame.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.panelAnhgame.TabIndex = 6;
             // 
@@ -240,7 +240,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.panelAnhgame);
+            this.panel3.Controls.Add(this.panel1);
             this.panel3.Location = new System.Drawing.Point(78, 100);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(909, 606);
@@ -271,17 +271,18 @@
             this.BackgroundImage = global::TestQuizz.Properties.Resources.LamBaiKiemtra;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1277, 789);
+            this.Controls.Add(this.panelAnhgame);
             this.Controls.Add(this.buttonLam);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FLamBaiKiemTra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FLamBaiKiemTra";
+      
             this.Load += new System.EventHandler(this.FLamBaiKiemTra_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

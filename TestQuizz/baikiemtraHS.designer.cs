@@ -39,14 +39,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.bttTimChualam = new System.Windows.Forms.Button();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.button1 = new System.Windows.Forms.Button();
             this.BttDalam = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.BttChuaLam = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bttTimChualam = new System.Windows.Forms.Button();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.dateTimePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.buttonTimDalam = new System.Windows.Forms.Button();
             this.textBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.dateTimePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuShadowPanel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -113,50 +113,6 @@
             this.bunifuShadowPanel2.Size = new System.Drawing.Size(1287, 462);
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 19;
-            // 
-            // bttTimChualam
-            // 
-            this.bttTimChualam.BackgroundImage = global::TestQuizz.Properties.Resources.BttTimKiem;
-            this.bttTimChualam.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bttTimChualam.FlatAppearance.BorderSize = 0;
-            this.bttTimChualam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttTimChualam.Location = new System.Drawing.Point(595, 70);
-            this.bttTimChualam.Name = "bttTimChualam";
-            this.bttTimChualam.Size = new System.Drawing.Size(66, 57);
-            this.bttTimChualam.TabIndex = 22;
-            this.bttTimChualam.UseVisualStyleBackColor = true;
-            this.bttTimChualam.Click += new System.EventHandler(this.bttTimChuaLam_Click);
-            // 
-            // bunifuPanel1
-            // 
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.LightGray;
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BorderRadius = 30;
-            this.bunifuPanel1.BorderThickness = 0;
-            this.bunifuPanel1.Controls.Add(this.dateTimePicker1);
-            this.bunifuPanel1.Location = new System.Drawing.Point(276, 108);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(288, 41);
-            this.bunifuPanel1.TabIndex = 21;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::TestQuizz.Properties.Resources.turn_back;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::TestQuizz.Properties.Resources.turn_back;
-            this.button1.Location = new System.Drawing.Point(1243, 11);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 36);
-            this.button1.TabIndex = 20;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // BttDalam
             // 
@@ -338,6 +294,75 @@
             this.BttChuaLam.UseDefaultRadiusAndThickness = true;
             this.BttChuaLam.Click += new System.EventHandler(this.BttChuaLam_Click);
             // 
+            // bttTimChualam
+            // 
+            this.bttTimChualam.BackgroundImage = global::TestQuizz.Properties.Resources.BttTimKiem;
+            this.bttTimChualam.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bttTimChualam.FlatAppearance.BorderSize = 0;
+            this.bttTimChualam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttTimChualam.Location = new System.Drawing.Point(595, 70);
+            this.bttTimChualam.Name = "bttTimChualam";
+            this.bttTimChualam.Size = new System.Drawing.Size(66, 57);
+            this.bttTimChualam.TabIndex = 22;
+            this.bttTimChualam.UseVisualStyleBackColor = true;
+            this.bttTimChualam.Click += new System.EventHandler(this.bttTimChuaLam_Click);
+            // 
+            // bunifuPanel1
+            // 
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.LightGray;
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BorderRadius = 30;
+            this.bunifuPanel1.BorderThickness = 0;
+            this.bunifuPanel1.Controls.Add(this.dateTimePicker1);
+            this.bunifuPanel1.Location = new System.Drawing.Point(276, 108);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(288, 41);
+            this.bunifuPanel1.TabIndex = 21;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.BackColor = System.Drawing.Color.Transparent;
+            this.dateTimePicker1.BorderRadius = 0;
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dateTimePicker1.Color = System.Drawing.Color.Silver;
+            this.dateTimePicker1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.dateTimePicker1.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dateTimePicker1.DisabledColor = System.Drawing.Color.Gray;
+            this.dateTimePicker1.DisplayWeekNumbers = false;
+            this.dateTimePicker1.DPHeight = 0;
+            this.dateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dateTimePicker1.FillDatePicker = false;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dateTimePicker1.ForeColor = System.Drawing.Color.Black;
+            this.dateTimePicker1.Icon = ((System.Drawing.Image)(resources.GetObject("dateTimePicker1.Icon")));
+            this.dateTimePicker1.IconColor = System.Drawing.Color.Gray;
+            this.dateTimePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dateTimePicker1.LeftTextMargin = 5;
+            this.dateTimePicker1.Location = new System.Drawing.Point(26, 4);
+            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(4, 32);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(248, 32);
+            this.dateTimePicker1.TabIndex = 24;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::TestQuizz.Properties.Resources.turn_back;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::TestQuizz.Properties.Resources.turn_back;
+            this.button1.Location = new System.Drawing.Point(1243, 11);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(62, 36);
+            this.button1.TabIndex = 20;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // buttonTimDalam
             // 
             this.buttonTimDalam.BackgroundImage = global::TestQuizz.Properties.Resources.BttTimKiem;
@@ -425,30 +450,6 @@
             this.textBox1.UseSystemPasswordChar = false;
             this.textBox1.WordWrap = true;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.BackColor = System.Drawing.Color.Transparent;
-            this.dateTimePicker1.BorderRadius = 0;
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dateTimePicker1.Color = System.Drawing.Color.Silver;
-            this.dateTimePicker1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            this.dateTimePicker1.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.dateTimePicker1.DisabledColor = System.Drawing.Color.Gray;
-            this.dateTimePicker1.DisplayWeekNumbers = false;
-            this.dateTimePicker1.DPHeight = 0;
-            this.dateTimePicker1.FillDatePicker = false;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dateTimePicker1.ForeColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.Icon = ((System.Drawing.Image)(resources.GetObject("dateTimePicker1.Icon")));
-            this.dateTimePicker1.IconColor = System.Drawing.Color.Gray;
-            this.dateTimePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.dateTimePicker1.LeftTextMargin = 5;
-            this.dateTimePicker1.Location = new System.Drawing.Point(26, 4);
-            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(0, 32);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(248, 32);
-            this.dateTimePicker1.TabIndex = 24;
-            // 
             // baikiemtraHS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -467,7 +468,6 @@
             this.Name = "baikiemtraHS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "baikiemtraHS";
-            this.Load += new System.EventHandler(this.baikiemtraHS_Load);
             this.bunifuShadowPanel2.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

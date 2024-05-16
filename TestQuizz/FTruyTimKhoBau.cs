@@ -39,7 +39,7 @@ namespace TestQuizz
         {
 
             InitializeComponent();
-
+            labelName.Text = hs.TenHS;
             this.danhSachCauHoi = cauhoiList;
             this.remainingSeconds = ThoiGian;
             this.hs = hs;
@@ -47,21 +47,15 @@ namespace TestQuizz
         }
         public void HoanThanh()
         {
-            pictureBoxDungSai.Image = null;
-            panel1.Visible = false;
-            panel2.Visible = false;
-            TextBox1.Visible = false;
-            buttonDA1.Visible = false;
-            buttonDA2.Visible = false;
-            buttonDA3 .Visible = false;
-            buttonDA4.Visible = false;
+          
             timerTinhGio.Stop();
             timerChuyenCanh.Stop();
             timerDungSai.Stop();
-            this.BackgroundImage = Properties.Resources.backgroundwin;
-            panel3 .Visible = true;
-            labelTimeHT.Text = TimeSpan.FromSeconds(TongThoiGian).ToString(@"mm\:ss");
-            labelDiemTong.Text = diem.ToString();
+            
+            FShowDiem f = new FShowDiem(diem, TongThoiGian);
+            this.Hide();
+            f.ShowDialog();
+           
             this.Close();
            
 
@@ -127,6 +121,7 @@ namespace TestQuizz
             if (bt == dapan)
             {
                 diem++;
+                dscautraloi.Add(new ChiTietCauTraLoi(currentQuestion.NoiDung, dapan, 1));
                 UpdatelabelDiem();
                 pictureBoxDungSai.Image = Properties.Resources.dungroibeoi;
                 currentBT.BackgroundImage = Properties.Resources.danhdau;
@@ -135,6 +130,7 @@ namespace TestQuizz
             }
             else
             {
+                dscautraloi.Add(new ChiTietCauTraLoi(currentQuestion.NoiDung, dapan, 0));
                 pictureBoxDungSai.Image = Properties.Resources.Sairoibeoi;
                 currentBT.BackgroundImage = Properties.Resources.dauX;
                

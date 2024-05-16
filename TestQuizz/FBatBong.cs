@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TestQuizz.Model;
@@ -19,16 +20,17 @@ namespace TestQuizz
         public int remainingSeconds { get; set; }
         public HocSinh hs { get; set; }
 
+       
         private int currentIndex = 0; // Chỉ số của câu hỏi hiện tại
         List<CauHoi> danhSachCauHoi = new List<CauHoi>();
 
-        int TongThoiGian = 4;
+        int TongThoiGian = 0;
         public string videoPath1 = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "TestQuizz", "Resources", "chup banh.mp4");
         public string videoPath2 = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "TestQuizz", "Resources", "chuphut.mp4");
         CursorsCustom h = new CursorsCustom();
         bool isVideoLoaded = false;
-        Timer timer = new Timer();
-        Timer timer2 = new Timer();
+        System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+        System.Windows.Forms.Timer timer2 = new System.Windows.Forms.Timer();
         int diem = 0;
         public double Diem { get { return diem; } }
 
@@ -42,24 +44,21 @@ namespace TestQuizz
             InitializeComponent();
             this.remainingSeconds = remainingSeconds;
             this.hs = hs;
+            label1.Text = hs.TenHS;
             CenterToScreen();
             danhSachCauHoi = cauhoiList;
  
         }
         public void HoanThanh()
         {
-            button1.Visible = false;
-            button2.Visible = false;
-            button3.Visible = false;
-            button4.Visible = false;
-            textBox1.Visible = false;
-            panel2.Visible = false;
+            
             timer2.Stop();
-            panel3.BringToFront();
-            labelTimeHT.Text= TimeSpan.FromSeconds(TongThoiGian).ToString(@"mm\:ss");
-            labelDiemTong.Text = diem.ToString();
+            FShowDiem f = new FShowDiem(diem, TongThoiGian);
+            this.Hide();
+            f.ShowDialog();
             this.Close();
         }
+ 
         private string CheckDapAn(string bt)
         {
             CauHoi currentQuestion = danhSachCauHoi[currentIndex];
@@ -67,10 +66,15 @@ namespace TestQuizz
             if (bt == dapan)
             {
                 diem++;
+                dscautraloi.Add(new ChiTietCauTraLoi(currentQuestion.NoiDung, dapan, 1));
                 UpdatelabelDiem();
                 return videoPath1;
             }
-            else return videoPath2;
+            else
+            {
+                dscautraloi.Add(new ChiTietCauTraLoi(currentQuestion.NoiDung, dapan, 0));
+                return videoPath2;
+            }
         }
         private void UpdatelabelDiem()
         {
@@ -206,7 +210,7 @@ namespace TestQuizz
                 button4.Enabled = true;
                 UpdateQuestion(); // Cập nhật câu hỏi mới
               
-                label5.Text = currentIndex < 10 ? "0" + (currentIndex+1).ToString() : (currentIndex + 1).ToString();
+                label5.Text =(currentIndex + 1).ToString();
                
 
             }

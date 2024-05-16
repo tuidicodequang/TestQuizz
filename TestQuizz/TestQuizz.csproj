@@ -40,11 +40,17 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
       <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
       <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuGauge">
       <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
@@ -52,11 +58,17 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
       <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
       <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
       <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
       <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
@@ -75,6 +87,9 @@
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel">
       <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShapes">
+      <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuShapes.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
       <HintPath>..\..\..\New folder\BunifuCrack-main\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
@@ -116,22 +131,46 @@
     <Compile Include="FDoiMK.Designer.cs">
       <DependentUpon>FDoiMK.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FTrangChu.Designer.cs">
+      <DependentUpon>FTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FShowDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FShowDiem.Designer.cs">
+      <DependentUpon>FShowDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThemCauHoiTufile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThemCauHoiTufile.Designer.cs">
+      <DependentUpon>FThemCauHoiTufile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FShowDanhSachCauHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FShowDanhSachCauHoi.designer.cs">
+      <DependentUpon>FShowDanhSachCauHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTaoBaiKiemTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTaoBaiKiemTra.designer.cs">
+      <DependentUpon>FTaoBaiKiemTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThongKeBaiLamHS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongKeBaiLamHS.designer.cs">
+      <DependentUpon>FThongKeBaiLamHS.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ChiTietCauTraLoi.cs" />
     <Compile Include="Model\CursorsCustom.cs" />
     <Compile Include="DAO\Database.cs" />
     <Compile Include="DAO\DBUtils.cs" />
-    <Compile Include="FBoCauHoi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FBoCauHoi.designer.cs">
-      <DependentUpon>FBoCauHoi.cs</DependentUpon>
-    </Compile>
     <Compile Include="FChonCapTuongUng.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,18 +206,6 @@
     </Compile>
     <Compile Include="Flogin.designer.cs">
       <DependentUpon>Flogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormNhap.Designer.cs">
-      <DependentUpon>FormNhap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FShowDanhSachCauHoi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FShowDanhSachCauHoi.designer.cs">
-      <DependentUpon>FShowDanhSachCauHoi.cs</DependentUpon>
     </Compile>
     <Compile Include="FTruyTimKhoBau.cs">
       <SubType>Form</SubType>
@@ -220,16 +247,12 @@
     <Compile Include="Model\BaiLam.cs" />
     <Compile Include="Model\BoCauHoi.cs" />
     <Compile Include="Model\CauHoi.cs" />
-    <Compile Include="Model\ChiTietBaiLam.cs" />
     <Compile Include="Model\GiaoVien.cs" />
     <Compile Include="Model\HocSinh.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="baikiemtraHS.resx">
       <DependentUpon>baikiemtraHS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FBoCauHoi.resx">
-      <DependentUpon>FBoCauHoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FChiTietBaiLam.resx">
       <DependentUpon>FChiTietBaiLam.cs</DependentUpon>
@@ -255,14 +278,23 @@
     <EmbeddedResource Include="Flogin.resx">
       <DependentUpon>Flogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FShowDiem.resx">
+      <DependentUpon>FShowDiem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormNhap.resx">
-      <DependentUpon>FormNhap.cs</DependentUpon>
+    <EmbeddedResource Include="FThemCauHoiTufile.resx">
+      <DependentUpon>FThemCauHoiTufile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FShowDanhSachCauHoi.resx">
       <DependentUpon>FShowDanhSachCauHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTaoBaiKiemTra.resx">
+      <DependentUpon>FTaoBaiKiemTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongKeBaiLamHS.resx">
+      <DependentUpon>FThongKeBaiLamHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTrangChu.resx">
+      <DependentUpon>FTrangChu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FTruyTimKhoBau.resx">
       <DependentUpon>FTruyTimKhoBau.cs</DependentUpon>
@@ -350,6 +382,7 @@
     <None Include="Resources\backgroundlatThe.png" />
     <Content Include="Resources\akv.png" />
     <None Include="Resources\akv1.png" />
+    <None Include="Resources\AnhTrangChu\1.jpg" />
     <Content Include="Resources\asbc.png" />
     <None Include="Resources\asbc1.png" />
     <None Include="Resources\BackGroundLop.png" />
@@ -363,6 +396,11 @@
     <None Include="Resources\BttGo.jpg.png" />
     <None Include="Resources\BttBack.png" />
     <None Include="Resources\BttStart.png" />
+    <None Include="Resources\backgroundwinDapDe.png" />
+    <None Include="Resources\backgroundwinBatBong.png" />
+    <None Include="Resources\backgroundwinDapDe1.png" />
+    <None Include="Resources\BackgroundHoanThanh.png" />
+    <None Include="Resources\BackgroundHoanThanh1.png" />
     <Content Include="Resources\caybua.png" />
     <Content Include="Resources\chup banh.mp4" />
     <Content Include="Resources\chuphut %28online-video-cutter.com%29.mp4" />
@@ -420,12 +458,18 @@
     <None Include="Resources\LoadCapTuTuongUng.jpg" />
     <None Include="Resources\quizz.png" />
     <None Include="Resources\LamBaiKiemtra.jpg" />
+    <None Include="Resources\search1.png" />
+    <None Include="Resources\titlenen.png" />
+    <None Include="Resources\TileTrangChu.png" />
     <Content Include="Resources\xechayvuotchuongngaivat.mp4" />
     <None Include="Resources\vuotchuongngaivat.png" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="GemBox.Document">
       <Version>35.0.1706</Version>
+    </PackageReference>
+    <PackageReference Include="MessageBox.Avalonia">
+      <Version>3.1.5.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Office.Interop.Word">
       <Version>15.0.4797.1004</Version>

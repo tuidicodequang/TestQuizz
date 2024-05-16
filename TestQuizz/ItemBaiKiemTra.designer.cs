@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemBaiKiemTra));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.lbTenBaiKT = new System.Windows.Forms.Label();
             this.lbThoiGianBatDau = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@
             // 
             this.lbTenBaiKT.AutoSize = true;
             this.lbTenBaiKT.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbTenBaiKT.Location = new System.Drawing.Point(72, 160);
+            this.lbTenBaiKT.Location = new System.Drawing.Point(63, 160);
             this.lbTenBaiKT.Name = "lbTenBaiKT";
             this.lbTenBaiKT.Size = new System.Drawing.Size(168, 28);
             this.lbTenBaiKT.TabIndex = 1;
@@ -110,7 +110,7 @@
             this.BTbatDau.Cursor = System.Windows.Forms.Cursors.Default;
             this.BTbatDau.FlatAppearance.BorderSize = 0;
             this.BTbatDau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTbatDau.Location = new System.Drawing.Point(212, 299);
+            this.BTbatDau.Location = new System.Drawing.Point(212, 302);
             this.BTbatDau.Name = "BTbatDau";
             this.BTbatDau.Size = new System.Drawing.Size(124, 42);
             this.BTbatDau.TabIndex = 0;
@@ -182,11 +182,11 @@
             this.btnXemChiTiet.ColorContrastOnClick = 45;
             this.btnXemChiTiet.ColorContrastOnHover = 45;
             this.btnXemChiTiet.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnXemChiTiet.CustomizableEdges = borderEdges2;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnXemChiTiet.CustomizableEdges = borderEdges1;
             this.btnXemChiTiet.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnXemChiTiet.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnXemChiTiet.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -251,6 +251,7 @@
             this.btnXemChiTiet.TextMarginLeft = 0;
             this.btnXemChiTiet.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnXemChiTiet.UseDefaultRadiusAndThickness = true;
+            this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
             // 
             // ItemBaiKiemTra
             // 
