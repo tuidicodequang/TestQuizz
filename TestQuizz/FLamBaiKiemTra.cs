@@ -334,7 +334,7 @@ namespace TestQuizz
                 panelAnhgame.Visible = false;
                 panel1.Visible = true;
 
-                lbThoiGian.Text = bailam.Thoigian.ToString();
+                lbThoiGian.Text =TimeSpan.FromSeconds(bailam.Thoigian).ToString(@"mm\:ss");
                 lbDiem.Text = bailam.Diem.ToString();
 
 

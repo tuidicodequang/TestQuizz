@@ -83,7 +83,7 @@ namespace TestQuizz
 
             else
             {
-                dscautraloi.Add(new ChiTietCauTraLoi(currentQuestion.NoiDung, dapan, 0));
+                dscautraloi.Add(new ChiTietCauTraLoi(currentQuestion.NoiDung, bt, 0));
                 pictureBoxDungSai.Image = Properties.Resources.x_no; // Hiển thị ảnh 1 nếu đáp án đúng
                 pictureBoxDungSai.Visible = true;
             }

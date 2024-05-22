@@ -282,7 +282,6 @@
             this.Name = "FLamBaiKiemTra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FLamBaiKiemTra";
-      
             this.Load += new System.EventHandler(this.FLamBaiKiemTra_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

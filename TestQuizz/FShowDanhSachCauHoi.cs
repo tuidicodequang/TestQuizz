@@ -44,30 +44,52 @@ namespace TestQuizz
         {
             dataGridView1.DataSource = db.getCauhoiTheoBoCauHoi(boCauHoi.ID);
         }
+        private bool KiemTraTextBoxRong(params TextBox[] textBoxes)
+        {
+            foreach (var textBox in textBoxes)
+            {
+                if (string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
 
         private void btnThemVaoBoCH_Click(object sender, EventArgs e)
         {
             try
             {
+                // Kiểm tra các trường TextBox xem có null hoặc rỗng không
+                if (!KiemTraTextBoxRong(txtMaCH, txtNoiDung, txtDapAnDung, txtDapAn1, txtDapAn2, txtDapAn3, txtMon))
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin câu hỏi.");
+                    return; // Thoát khỏi phương thức nếu có trường nào đó bị null hoặc rỗng
+                }
+
+                // Gán giá trị cho đối tượng CauHoiDuocChon
                 CauHoiDuocChon.ID = txtMaCH.Text;
-                CauHoiDuocChon.NoiDung = txtDapAnDung.Text;
+                CauHoiDuocChon.NoiDung = txtNoiDung.Text;
                 CauHoiDuocChon.DapAnDung = txtDapAnDung.Text;
                 CauHoiDuocChon.DapAn1 = txtDapAn1.Text;
                 CauHoiDuocChon.DapAn2 = txtDapAn2.Text;
                 CauHoiDuocChon.DapAn3 = txtDapAn3.Text;
-                CauHoiDuocChon.HinhAnh = "";
+                CauHoiDuocChon.HinhAnh = ""; // Nếu có hình ảnh thì xử lý sau
                 CauHoiDuocChon.Mon = txtMon.Text;
 
-                if (!db.KiemTraCauHoiDaTonTaiTrongBoCauHoi(boCauHoi.ID,CauHoiDuocChon.ID))
+                // Kiểm tra câu hỏi đã tồn tại trong bộ câu hỏi chưa
+                if (!db.KiemTraCauHoiDaTonTaiTrongBoCauHoi(boCauHoi.ID, CauHoiDuocChon.ID))
                 {
                     db.InsertCauHoiVaoBoCauHoi(boCauHoi.ID, CauHoiDuocChon.ID);
                     MessageBox.Show("Đã thêm câu hỏi vào bộ câu hỏi");
-                }  
+                }
                 else
                 {
-                    MessageBox.Show("Đã tồn tại câu hỏi trong bộ câu hỏi");
-                }    
-                
+                    MessageBox.Show("Câu hỏi đã tồn tại trong bộ câu hỏi");
+                }
+
+                // Tải lại danh sách câu hỏi trong bộ câu hỏi
                 LoadCauHoiTrongBoCauHoi();
             }
             catch (Exception ex)
@@ -96,6 +118,14 @@ namespace TestQuizz
         {
             try
             {
+                // Kiểm tra các trường TextBox xem có null hoặc rỗng không
+                if (!KiemTraTextBoxRong(txtMaCH, txtNoiDung, txtDapAnDung, txtDapAn1, txtDapAn2, txtDapAn3, txtMon))
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin câu hỏi.");
+                    return; // Thoát khỏi phương thức nếu có trường nào đó bị null hoặc rỗng
+                }
+
+                // Tạo đối tượng CauHoi
                 CauHoi cauhoi = new CauHoi()
                 {
                     ID = txtMaCH.Text,
@@ -106,25 +136,26 @@ namespace TestQuizz
                     DapAn3 = txtDapAn3.Text,
                     HinhAnh = "",
                     Mon = txtMon.Text
-
-
                 };
+
+                // Kiểm tra câu hỏi đã tồn tại trong thư viện câu hỏi chưa
                 if (db.KiemTraCauHoiDaTonTai(cauhoi.ID))
                 {
                     MessageBox.Show("Câu hỏi đã tồn tại");
                 }
                 else
                 {
-                    db.InsertCauHoiVaoThuVienCauHoi(cauhoi,lop);
+                    db.InsertCauHoiVaoThuVienCauHoi(cauhoi, lop);
                     MessageBox.Show("Thêm câu hỏi thành công");
                     LoadBangAllCauHoi();
-                }    
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+        
         private void button1_Click(object sender, EventArgs e)
         {
           this.Close();

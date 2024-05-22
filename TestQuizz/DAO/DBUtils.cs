@@ -112,7 +112,7 @@ namespace TestQuizz
 
         public DataTable getAllBaiKiemTraTheoLop(string tenlop,string mon)
         {
-            string strSQL = "SELECT * FROM BaiKiemTra WHERE TenLop = '" + tenlop + "' AND Mon = '" + mon + "'";
+            string strSQL = "SELECT * FROM BaiKiemTra WHERE TenLop = N'" + tenlop + "' AND Mon = N'" + mon + "'";
 
             DataTable dt = db.Excute(strSQL);
             return dt;

@@ -72,7 +72,7 @@ namespace TestQuizz
             }
             else
             {
-                dscautraloi.Add(new ChiTietCauTraLoi(currentQuestion.NoiDung, dapan, 0));
+                dscautraloi.Add(new ChiTietCauTraLoi(currentQuestion.NoiDung, bt, 0));
                 return videoPath2;
             }
         }

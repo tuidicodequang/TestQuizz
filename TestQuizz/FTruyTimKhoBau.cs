@@ -130,7 +130,7 @@ namespace TestQuizz
             }
             else
             {
-                dscautraloi.Add(new ChiTietCauTraLoi(currentQuestion.NoiDung, dapan, 0));
+                dscautraloi.Add(new ChiTietCauTraLoi(currentQuestion.NoiDung, bt, 0));
                 pictureBoxDungSai.Image = Properties.Resources.Sairoibeoi;
                 currentBT.BackgroundImage = Properties.Resources.dauX;
                

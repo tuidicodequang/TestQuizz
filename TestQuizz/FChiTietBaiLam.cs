@@ -37,7 +37,7 @@ namespace TestQuizz
 
         private async void DelayedLoadChart()
         {
-            await Task.Delay(1000); // Chờ 1 giây
+            await Task.Delay(500);
             LoadChart();
         }
 

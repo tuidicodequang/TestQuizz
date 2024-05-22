@@ -74,6 +74,9 @@ namespace doan
             timer.Stop();
             UpdateDiemSo();
             FShowDiem f = new FShowDiem(diem, TongThoiGian);
+            this.Hide();
+            f.ShowDialog();
+            this.Close();
         } 
         private void UpdateDiemSo()
         {
